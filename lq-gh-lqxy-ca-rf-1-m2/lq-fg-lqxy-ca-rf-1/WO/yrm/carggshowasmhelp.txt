@@ -1,0 +1,91 @@
+Show the code rustc generates for any function
+
+Usage: cargo-asm [-p=SPEC] [ARTIFACT] [-M=ARG]... [TARGET-CPU] [--rust] [-c=COUNT] [--simplify] [
+--include-constants] [--this-workspace | --all-crates | --all-sources] OUTPUT-FORMAT [--everything |
+FUNCTION [INDEX]]
+
+ Usage:
+ 1. Focus on a single assembly producing target:
+ % cargo asm -p isin --lib   # here we are targeting lib in isin crate
+ 2. Narrow down a function:
+ % cargo asm -p isin --lib from_ # here "from_" is part of the function you are interested intel
+ 3. Get the full results: % cargo asm -p isin --lib isin::base36::from_alphanum
+
+Pick artifact for analysis:
+        --lib                 Show results from library code
+        --test=TEST           Show results from an integration test
+        --bench=BENCH         Show results from a benchmark
+        --example=EXAMPLE     Show results from an example
+        --bin=BIN             Show results from a binary
+
+Cargo options
+        --manifest-path=PATH  Path to Cargo.toml, defaults to one in current folder
+        --config=<KEY=VALUE>  Override a cargo configuration value
+        --target-dir=DIR      Use custom target directory for generated artifacts, create if missing
+                              [env:CARGO_TARGET_DIR: N/A]
+        --dry                 Produce a build plan instead of actually building
+        --frozen              Requires Cargo.lock and cache to be up-to-date
+        --locked              Requires Cargo.lock to be up-to-date
+        --offline             Run without accessing the network
+    -q, --quiet               Do not print cargo log messages
+        --no-default-features  Do not activate `default` feature
+        --all-features        Activate all available features
+        --features=FEATURE    A feature to activate, can be used multiple times
+        --release             Compile in release mode (default)
+        --dev                 Compile in dev mode
+        --profile=PROFILE     Build for this specific profile, you can also use `dev` and `release`
+                              here
+                              [env:CARGO_SHOW_ASM_PROFILE: N/A]
+        --target=TRIPLE       Build for the target triple
+    -C=FLAG                   Codegen flags to rustc, see 'rustc -C help' for details
+    -Z=FLAG                   Unstable (nightly-only) flags to Cargo, see 'cargo -Z help' for
+                              details
+
+Postprocessing options:
+        --rust                Print interleaved Rust code
+    -c, --context=COUNT       Include other called functions, recursively, up to COUNT depth
+                              [default: 0]
+        --color               Enable color highlighting
+        --no-color            Disable color highlighting
+        --full-name           Include full demangled name instead of just prefix
+        --short-name          Include demangled names without hash suffix (default)
+        --keep-mangled        Do not demangle symbol names
+    -K, --keep-labels         Keep all the original labels
+    -B, --keep-blanks         Strip redundant labels, but keep spaces in their place
+    -R, --reduce-labels       Strip redundant labels entirely
+    -v, --verbose             more verbose output, can be specified multiple times
+    -s, --silent              print less user-forward information to make consumption by tools
+                              easier
+        --simplify            Try to strip some of the non-assembly instruction information
+        --include-constants   Include sections containing string literals and other constants
+    -b, --keep-blank          Keep blank lines
+        --this-workspace      Show rust sources from current workspace only
+        --all-crates          Show rust sources from current workspace and from rust registry
+        --all-sources         Show all the rust sources including stdlib and compiler
+
+Pick output type:
+        --asm                 Show assembly
+        --disasm              Disassembly binaries or object files
+        --llvm                Show llvm-ir
+        --llvm-input          Show llvm-ir before any LLVM passes
+        --mir                 Show MIR
+        --wasm                Show WASM, needs wasm32-unknown-unknown target installed
+        --mca                 Show llvm-mca anasysis
+        --intel               Use Intel style for assembly
+        --att                 Use AT&T style for assembly
+
+Pick item to display from the artifact
+        --everything          Dump the whole file
+    FUNCTION                  Dump a function with a given name, filter functions by name
+    INDEX                     Select specific function when there's several with the same name
+
+Available options:
+    -p, --package=SPEC        Package to use, defaults to a current one,
+        --file=PATH           Disassemble or process this file instead of calling cargo,
+                              requires cargo-show-asm to be compiled with disasm feature
+    -M, --mca-arg=ARG         Pass parameter to llvm-mca for mca targets
+        --native              Optimize for the CPU running the compiler
+        --target-cpu=CPU      Optimize code for a specific CPU, see 'rustc --print target-cpus'
+    -h, --help                Prints help information
+    -V, --version             Prints version information
+

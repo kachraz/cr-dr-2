@@ -1,0 +1,11 @@
+[package]
+name = "w2"
+version = "0.1.0"
+edition = "2024"
+authors = ["PantySmeller"]
+
+[dependencies]
+cfonts = "1.2.0"
+sh2 = "0.1.0"
+sha256 = "1.6.0"
+yansi = "1.0.1"

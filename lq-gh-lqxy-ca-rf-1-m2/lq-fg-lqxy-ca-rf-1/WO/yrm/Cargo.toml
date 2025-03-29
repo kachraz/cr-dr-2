@@ -1,0 +1,9 @@
+[package]
+name = "yrm"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+cfonts = "1.2.0"
+yansi = "1.0.1"

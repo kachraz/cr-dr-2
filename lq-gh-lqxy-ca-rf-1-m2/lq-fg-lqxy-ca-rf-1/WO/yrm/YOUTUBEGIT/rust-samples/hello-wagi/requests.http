@@ -1,0 +1,29 @@
+GET http://localhost:3000/level1-ping
+
+###
+POST http://localhost:3000/level2?foo=bar
+Content-Type: application/json
+
+{
+    "foo": "Bar"
+}
+
+###
+POST http://localhost:3000/level3/file?foo=bar
+Content-Type: application/json
+
+{
+    "foo": "Bar"
+}
+
+###
+GET http://localhost:3000/level3?foo=bar
+
+###
+GET http://localhost:3000/level4?year=2022&month=10&day=09
+
+###
+GET https://www.nytimes.com/games/wordle/index.html
+
+###
+GET https://www.nytimes.com/games/wordle/main.9622bc55.js
