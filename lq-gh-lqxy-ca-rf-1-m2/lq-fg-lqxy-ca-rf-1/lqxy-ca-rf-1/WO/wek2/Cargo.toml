@@ -1,0 +1,12 @@
+[package]
+name = "wek2"
+version = "0.1.0"
+edition = "2024"
+author = "BootySniffer <booty.sniff.er>"
+description = "A simple CLI tool to get the weather of a location"
+license = "WomanJuice"
+
+
+[dependencies]
+cfonts = "1.2.0"
+yansi = "1.0.1"

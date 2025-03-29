@@ -1,0 +1,9 @@
+[package]
+name = "fractal_tree_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fractal_tree = { path = "../fractal_tree", default-features = false, features = ["svg"] }
+anyhow = "1.0"
+clap = { version = "4.0.24", features = ["derive"] }

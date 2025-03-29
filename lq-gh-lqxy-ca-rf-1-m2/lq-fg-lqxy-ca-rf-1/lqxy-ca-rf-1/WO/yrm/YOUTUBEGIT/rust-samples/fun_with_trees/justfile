@@ -1,0 +1,45 @@
+# General helper tasks
+build TARGET:
+    cargo build {{TARGET}}
+run APP TARGET TARGET_FILE DEPTH TRUNK_LENGTH:
+    cargo run {{TARGET}} --bin {{APP}} -- -t {{TARGET_FILE}} -d {{DEPTH}} -l {{TRUNK_LENGTH}}
+help APP TARGET:
+    cargo run {{TARGET}} --bin {{APP}} -- -h
+
+# Build tasks
+build-wasi: (build "--target=wasm32-wasi")
+build-linux: (build "--target=x86_64-unknown-linux-gnu")
+
+# Run tasks
+run-wasi: (run-wasi-param "tree.svg" "13" "100")
+run-wasi-param TARGET_FILE DEPTH TRUNK_LENGTH: (build-wasi)
+    wasmtime --dir=. ./target/wasm32-wasi/debug/fractal_tree_cli.wasm -- -t {{TARGET_FILE}} -d {{DEPTH}} -l {{TRUNK_LENGTH}}
+#   wasmtime --dir=. ./target/wasm32-wasi/debug/fractal_tree_cli.wasm --fuel 4750000000 -- -t {{TARGET_FILE}} -d {{DEPTH}} -l {{TRUNK_LENGTH}}
+run-linux: (run-linux-param "tree.svg" "13" "100")
+run-linux-param TARGET_FILE DEPTH TRUNK_LENGTH: (run "fractal_tree_cli" "--target=x86_64-unknown-linux-gnu" TARGET_FILE DEPTH TRUNK_LENGTH)
+help-linux: (help "fractal_tree_cli" "--target=x86_64-unknown-linux-gnu")
+
+build-spin:
+    cd fractal_tree_spin; spin build
+run-spin: (build-spin)
+    cd fractal_tree_spin; spin up
+deploy-spin: (build-spin)
+    cd fractal_tree_spin; spin deploy
+
+run-wasmedge: (run-wasmedge-param "./target/wasm32-wasi/debug/fractal_tree_cli.wasm" "./tree.svg" "8" "100")
+run-wasmedge-stats: (run-wasmedge-param-stats "./target/wasm32-wasi/debug/fractal_tree_cli.wasm" "./tree.svg" "10" "100")
+run-wasmedge-param WASM TARGET_FILE DEPTH TRUNK_LENGTH:  (build-wasi)
+    wasmedge --dir .:. {{WASM}} -t {{TARGET_FILE}} -d {{DEPTH}} -l {{TRUNK_LENGTH}}
+run-wasmedge-param-stats WASM TARGET_FILE DEPTH TRUNK_LENGTH:  (build-wasi)
+    wasmedge --dir .:. --enable-all-statistics {{WASM}} -t {{TARGET_FILE}} -d {{DEPTH}} -l {{TRUNK_LENGTH}}
+aot: (build-wasi)
+    wasmedgec ./target/wasm32-wasi/debug/fractal_tree_cli.wasm ./target/wasm32-wasi/debug/fractal_tree_cli_aot.wasm
+run-aot:
+    just run-wasmedge-param "./target/wasm32-wasi/debug/fractal_tree_cli_aot.wasm" "./tree.svg" "13" "100"
+run-aot-stats:
+    just run-wasmedge-param-stats "./target/wasm32-wasi/debug/fractal_tree_cli_aot.wasm" "./tree.svg" "13" "100"
+
+docker: (build-wasi)
+    cp target/wasm32-wasi/release/fractal_tree_spin.wasm Container/
+    cd Container; docker build -t rstropek/fractal_tree_spin .
+    docker push rstropek/fractal_tree_spin:latest
