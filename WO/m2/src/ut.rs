@@ -33,14 +33,7 @@ pub fn header(text: &str) {
 
 // Function to clear console
 pub fn clear_console() {
-    if cfg!(target_os = "windows") {
-        Command::new("cmd")
-            .args(&["/C", "cls"])
-            .status()
-            .expect("Failed to clear console");
-    } else {
-        Command::new("clear")
-            .status()
-            .expect("Failed to clear console");
-    }
+    Command::new("clear")
+        .status()
+        .expect("Failed to clear console");
 }
