@@ -7,5 +7,5 @@ pub fn w1_main() {
     print_with_synthwave_gradient("booty".to_string());
     header("W3");
     println!("W1 is a module that does something interesting.");
-    println!("It is currently under development.");
+    println!("It is currently under bootysmells.");
 }

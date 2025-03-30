@@ -2,6 +2,7 @@
 #![allow(dead_code)]
 
 use cfonts::{Fonts, Options, say};
+use std::process::Command;
 use yansi::Paint;
 
 pub fn print_with_synthwave_gradient(text: String) {
@@ -32,5 +33,14 @@ pub fn header(text: &str) {
 
 // Function to clear console
 pub fn clear_console() {
-    print!("\x1B[2J\x1B[1;1H");
+    if cfg!(target_os = "windows") {
+        Command::new("cmd")
+            .args(&["/C", "cls"])
+            .status()
+            .expect("Failed to clear console");
+    } else {
+        Command::new("clear")
+            .status()
+            .expect("Failed to clear console");
+    }
 }
