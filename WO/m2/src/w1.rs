@@ -136,4 +136,17 @@ fn str_3() {
 
 fn str_4() {
     header("Structs Function 4 - Structs with Enums");
+
+    let divy = "+".repeat(30);
+
+    // Define struct here
+    let user4 = User1 {
+        username: String::from("ina"),
+        email: String::from("ina@ina.com"),
+        uri: String::from("http://ina.com"),
+        active: true,
+    };
+
+    // Print the struct
+    println!("{:#?}", user4);
 }
