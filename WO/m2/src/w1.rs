@@ -73,6 +73,7 @@ fn str_2() {
     println!("{:#?}", nina);
 
     // Field Access
+    // Note you have to unwrap the value since Some is an enum
     println!("First Name: {}", nina.first_name.green());
     println!("Age: {:#?}", nina.age.unwrap().blue());
 }
