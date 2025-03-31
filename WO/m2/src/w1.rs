@@ -1,8 +1,10 @@
 // work one
 #![allow(unused)]
 #![allow(dead_code)]
+#![allow(unused_imports)]
 
 use crate::ut::{clear_console, header, print_with_synthwave_gradient};
+use yan
 
 //////////////////////////////////////////
 /// Main Entry Function
@@ -25,5 +27,9 @@ pub fn w1_main() {
 struct Person {
     first_name: String,
     last_name: String,
-    age: u32,
+    age: u8,
+}
+
+fn str_1() {
+
 }
