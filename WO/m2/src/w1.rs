@@ -16,7 +16,7 @@ pub fn w1_main() {
     print_with_synthwave_gradient("booty".to_string());
 
     // Call the functions
-    str_1();
+    str_2();
 }
 
 //////////////////////////////////////////
@@ -46,4 +46,18 @@ fn str_1() {
             age: 30,
         }
     );
+}
+
+/*
+Creating Struct Instances
+*/
+
+fn str_2() {
+    header("Structs Function 2 - Creating instances");
+
+    let nina = Person {
+        first_name: "Nina".to_string(),
+        last_name: "Simone".to_string(),
+        age: 20,
+    };
 }
