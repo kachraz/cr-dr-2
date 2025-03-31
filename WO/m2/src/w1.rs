@@ -52,13 +52,21 @@ fn str_1() {
 Creating Struct Instances
 */
 
+#[derive(Debug)]
+struct Person1 {
+    first_name: String,
+    last_name: String,
+    age: Option<u8>,
+}
+
 fn str_2() {
     header("Structs Function 2 - Creating instances");
 
-    let nina = Person {
+    // Must pass all the field values in the struc
+    let nina = Person1 {
         first_name: "Nina".to_string(),
         last_name: "Simone".to_string(),
-        age: 20,
+        age: None,
     };
 
     // Printing the whole struct
