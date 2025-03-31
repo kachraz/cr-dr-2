@@ -1,9 +1,9 @@
 // main entry point
 
 mod ut;
-mod w1;
-use w1::w1_main;
+mod w2;
+use w2::w2_main;
 
 fn main() {
-    w1_main();
+    w2_main();
 }
