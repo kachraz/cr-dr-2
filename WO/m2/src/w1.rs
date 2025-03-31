@@ -134,6 +134,7 @@ fn str_3() {
     );
 }
 
+// Another method of creating a struct
 fn str_4() {
     header("Structs Function 4 - Structs with Enums");
 
