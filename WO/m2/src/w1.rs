@@ -108,7 +108,9 @@ impl User1 {
 fn str_3() {
     header("Structs Function 3 - More Structs");
 
-    let new_user = User1::new(
+    let divy = "+".repeat(30);
+
+    let mut new_user = User1::new(
         String::from("nina"),
         String::from("nina@mistress.com"),
         String::from("http://bootyfarts.com"),
@@ -119,5 +121,12 @@ fn str_3() {
         "Account = {}, Active = {}",
         new_user.username.green(),
         new_user.active.green()
+    );
+
+    new_user.deactivate();
+    println!(
+        "Account = {}, Active = {}",
+        new_user.username.red(),
+        new_user.active.red()
     );
 }
