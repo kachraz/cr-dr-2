@@ -13,10 +13,10 @@ use yansi::Paint;
 
 pub fn w1_main() {
     clear_console();
-    print_with_synthwave_gradient("booty".to_string());
+    print_with_synthwave_gradient("Structs".to_string());
 
     // Call the functions
-    str_2();
+    str_3();
 }
 
 //////////////////////////////////////////
@@ -76,4 +76,41 @@ fn str_2() {
     // Note you have to unwrap the value since Some is an enum
     println!("First Name: {}", nina.first_name.green());
     println!("Age: {:#?}", nina.age.unwrap().blue());
+}
+
+// More Structs
+#[derive(Debug)]
+struct User1 {
+    username: String,
+    email: String,
+    uri: String,
+    active: bool,
+}
+
+// Associated function doesnt require self
+
+impl User1 {
+    fn new(username: String, email: String, uri: String) -> User1 {
+        User1 {
+            username,
+            email,
+            uri,
+            active: true,
+        }
+    }
+}
+
+fn str_3() {
+    header("Structs Function 3 - More Structs");
+
+    let new_user = User1::new(
+        String::from("nina"),
+        String::from("nina@mistress.com"),
+        String::from("http://bootyfarts.com"),
+    );
+
+    println!("Username: {}", new_user.username.green());
+    println!("Email: {}", new_user.email.blue());
+    println!("URI: {}", new_user.uri.red());
+    println!("Active: {}", new_user.active.to_string().yellow());
 }
