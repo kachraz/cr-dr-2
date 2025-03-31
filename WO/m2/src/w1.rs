@@ -139,18 +139,20 @@ fn str_4() {
 
     let divy = "+".repeat(30);
 
-    let username: String::from("ina");
-    let email: String::from("ina@ina.com");
-    let uri: String::from("http://ina.com");
-    let active: true;
+    // Define the elements here - Making sure vars need to match the name of the field
+    let username = String::from("ina");
+    let email = String::from("ina@ina.com");
+    let uri = String::from("http://ina.com");
+    let active = true;
 
     // Define struct here
     let user4 = User1 {
-        
+        username,
+        email,
+        uri,
+        active,
     };
 
     // Print the struct
     println!("{:#?}", user4);
-
-
 }
