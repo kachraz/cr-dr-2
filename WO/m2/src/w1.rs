@@ -60,4 +60,6 @@ fn str_2() {
         last_name: "Simone".to_string(),
         age: 20,
     };
+
+    println!("{:#?}", nina);
 }
