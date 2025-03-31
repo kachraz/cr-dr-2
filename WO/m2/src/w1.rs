@@ -115,7 +115,9 @@ fn str_3() {
     );
 
     println!("Username: {}", new_user.username.green());
-    println!("Email: {}", new_user.email.blue());
-    println!("URI: {}", new_user.uri.red());
-    println!("Active: {}", new_user.active.to_string().yellow());
+    println!(
+        "Account = {}, Active = {}",
+        new_user.username.green(),
+        new_user.active.green()
+    );
 }
