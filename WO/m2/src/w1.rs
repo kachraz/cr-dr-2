@@ -66,7 +66,7 @@ fn str_2() {
     let nina = Person1 {
         first_name: "Nina".to_string(),
         last_name: "Simone".to_string(),
-        age: None,
+        age: Some(99),
     };
 
     // Printing the whole struct
@@ -74,5 +74,5 @@ fn str_2() {
 
     // Field Access
     println!("First Name: {}", nina.first_name.green());
-    println!("Age: {:#?}", nina.age.blue());
+    println!("Age: {:#?}", nina.age.unwrap().blue());
 }
