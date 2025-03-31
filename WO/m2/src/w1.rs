@@ -89,14 +89,19 @@ struct User1 {
 
 // Associated function doesnt require self
 
+// Constructor Function
 impl User1 {
-    fn new(username: String, email: String, uri: String) -> User1 {
-        User1 {
+    fn new(username: String, email: String, uri: String) -> Self {
+        Self {
             username,
             email,
             uri,
             active: true,
         }
+    }
+
+    fn deactivate(&mut self) {
+        self.active = false;
     }
 }
 
