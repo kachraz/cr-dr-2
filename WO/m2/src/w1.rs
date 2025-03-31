@@ -61,5 +61,9 @@ fn str_2() {
         age: 20,
     };
 
+    // Printing the whole struct
     println!("{:#?}", nina);
+
+    // Field Access
+    println!("First Name: {}", nina.first_name.green());
 }
