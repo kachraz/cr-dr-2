@@ -16,7 +16,7 @@ pub fn w1_main() {
     print_with_synthwave_gradient("Structs".to_string());
 
     // Call the functions
-    str_3();
+    str_4();
 }
 
 //////////////////////////////////////////
@@ -132,4 +132,8 @@ fn str_3() {
         new_user.username.red(),
         new_user.active.red()
     );
+}
+
+fn str_4() {
+    header("Structs Function 4 - Structs with Enums");
 }
