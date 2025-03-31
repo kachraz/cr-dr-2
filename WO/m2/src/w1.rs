@@ -115,13 +115,16 @@ fn str_3() {
         String::from("nina@mistress.com"),
         String::from("http://bootyfarts.com"),
     );
-
     println!("Username: {}", new_user.username.green());
+
+    println!("{}", divy);
     println!(
         "Account = {}, Active = {}",
         new_user.username.green(),
         new_user.active.green()
     );
+
+    println!("{}", divy);
 
     new_user.deactivate();
     println!(
