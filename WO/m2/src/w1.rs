@@ -74,5 +74,5 @@ fn str_2() {
 
     // Field Access
     println!("First Name: {}", nina.first_name.green());
-    println!("Age: {}", nina.age.red());
+    println!("Age: {:#?}", nina.age.blue());
 }
