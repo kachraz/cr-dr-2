@@ -134,6 +134,10 @@ fn str_3() {
     );
 }
 
+// Tuples definition
+
+struct Point(i32, i32, i32);
+
 // Another method of creating a struct
 fn str_4() {
     header("Structs Function 4 - Structs with Enums");
@@ -156,4 +160,12 @@ fn str_4() {
 
     // Print the struct
     println!("{:#?}", user4);
+
+    let point = Point(10, 20, 30);
+    println!(
+        "Point: ({}, {}, {})",
+        point.0.red(),
+        point.1.red(),
+        point.2.red()
+    );
 }
