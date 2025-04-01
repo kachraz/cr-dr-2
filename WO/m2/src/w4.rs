@@ -256,5 +256,10 @@ fn enum_6() {
     let shape = vec![Shape::Circle(5.0), Shape::Square(10.0)];
 
     let tt_area:f64 = shape.iter()
-    .map
+    .map(
+        |shape| match shape {
+            Shape::Circle(radius) => std::f64::consts::PI * radius * radius,
+            Shape::Square(side) => side * side,
+        }
+    );
 }
