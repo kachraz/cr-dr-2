@@ -100,4 +100,20 @@ fn strman_2() {
 // Iteration over characters
 fn strman_3() {
     header("String Manipulation\nIteration over Characters");
+
+    let divy = "~_~".repeat(10);
+
+    let sentence = "Dancing is good for the soul";
+
+    println!("{}{}", divy, sentence.green());
+    for c in sentence.chars() {
+        match c {
+            'a' => print!("{}", c.red()),
+            'e' => print!("{}", c.blue()),
+            'i' => print!("{}", c.green()),
+            'o' => print!("{}", c.yellow()),
+            'u' => print!("{}", c.cyan()),
+            _ => print!("{}", c),
+        }
+    }
 }
