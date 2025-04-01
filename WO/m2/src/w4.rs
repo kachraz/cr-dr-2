@@ -299,10 +299,11 @@ fn enum_7() {
     taste_icecream(ice_cream);
 }
 
+// Second Version using the other arm method
 fn enum_7_2() {
     let title = "Enums - Exhaustive Matches";
     header(title);
 
     let ice_cream = IceCreams::Chocolate;
-    taste_icecream(ice_cream);
+    taste_icecream2(ice_cream);
 }
