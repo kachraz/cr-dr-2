@@ -18,7 +18,14 @@ use yansi::Paint;
 
 pub fn w3_main() {
     clear_console();
-    print_with_synthwave_gradient("Strings".to_string());
+    let title = "Vector and Ops".to_string();
+    print_with_synthwave_gradient(title);
 
     // Call the functions
 }
+
+//////////////////////////////////////////
+/// Vector Related Ops
+//////////////////////////////////////////
+
+
