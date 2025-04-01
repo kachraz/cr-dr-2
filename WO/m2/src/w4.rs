@@ -147,3 +147,21 @@ fn enum_3() {
         None => println!("Division by zero!"),
     }
 }
+
+fn enum_4() {
+    let title = "Option Enum";
+    header(title);
+
+    let a: f32 = 3000;
+    let b = 10;
+
+    let rez = enum3_div(a, b);
+
+    // Using the enum
+    divy("⚛");
+    println!("{} / {} = ", a, b);
+    match rez {
+        Some(v) => println!("Result: {}", v.green()),
+        None => println!("Division by zero!"),
+    }
+}
