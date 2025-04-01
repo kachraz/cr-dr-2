@@ -107,6 +107,7 @@ fn enums_2() {
         region: JusRegions::South,
     };
 
+    divy("⚛");
     println!(
         "Jus1 : {} from {:?}",
         jus1.name.yellow(),
@@ -118,6 +119,9 @@ fn enums_2() {
         jus2.region.green()
     );
 
+    divy("⚛");
     enums_2_supported_regions(jus1.region);
     enums_2_supported_regions(JusRegions::East);
 }
+
+//////// Option Enum Testing ///////
