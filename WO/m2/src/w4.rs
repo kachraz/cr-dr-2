@@ -175,10 +175,12 @@ fn enum_4() {
 // Applied Enums
 
 enum FileSize {
-    Bytest(u64),
-    KB(u64),
-    MB(u64),
-    GB(u64),
+    Bytes(u64),
+    Kilobytes(u64),
+    Megabytes(u64),
+    Gigabytes(u64),
 }
+
+fn enum5_format_size(size: u64) -> String {}
 
 fn enum_5() {}
