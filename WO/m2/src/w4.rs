@@ -242,3 +242,5 @@ fn enum_5_2() {
 
     println!("File size 2: {}", filesize.format_size2().green());
 }
+
+//////////// Vectors and Enums ///////////////
