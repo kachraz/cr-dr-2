@@ -12,6 +12,8 @@ use std::{fmt::format, vec};
 use crate::ut::{clear_console, header, print_with_synthwave_gradient};
 use yansi::Paint;
 
+let divy = "—".repeat(50);
+
 //////////////////////////////////////////
 /// Main Entry Function
 //////////////////////////////////////////
@@ -58,4 +60,6 @@ fn vecs_2() {
     header(hea1);
 
     let vec = vec![1, 2, 3, 4, 5];
+
+    //
 }
