@@ -143,7 +143,7 @@ fn enum_3() {
     divy("⚛");
     println!("{} / {} = ", a, b);
     match rez {
-        Some(v) => println!("Result: {}", rez.green()),
+        Some(v) => println!("Result: {}", v.green()),
         None => println!("Division by zero!"),
     }
 }
