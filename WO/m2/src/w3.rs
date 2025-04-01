@@ -22,7 +22,7 @@ pub fn w3_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    vecs_1();
+    vecs_2();
 }
 
 //////////////////////////////////////////
@@ -50,3 +50,7 @@ fn vecs_1() {
     // vecs1_ownership();
     vecs1_modifiable();
 }
+
+// Retrieving elements from a vector
+
+fn vecs_2() {}
