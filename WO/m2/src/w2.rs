@@ -133,4 +133,8 @@ fn strman_4() {
     header("String Manipulation - Split by words");
 
     let sentence = "Splitting a string into words";
+
+    // Using vectors
+    let words: Vec<&str> = sentence.split_whitespace().collect();
+    println!("Words: {:?}", words.magenta());
 }
