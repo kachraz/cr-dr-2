@@ -106,4 +106,13 @@ fn vecs_2() {
 
 // Adding and removing elements from a vector
 
-fn vecs_3() {}
+fn vecs_3() {
+    let hea1 = "Adding and Removing Elements from a Vector";
+    header(hea1);
+
+    let mut v = vec![1, 2];
+
+    divy("o");
+    v.push(99);
+    println!("After push: {:?}", v.yellow().italic());
+}
