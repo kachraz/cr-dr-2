@@ -116,4 +116,7 @@ fn enums_2() {
         jus2.name.green(),
         jus2.region.green()
     );
+
+    enums_2_supported_regions(jus1.region);
+    enums_2_supported_regions(jus2.region);
 }
