@@ -5,6 +5,7 @@ use cfonts::{Fonts, Options, say};
 use std::process::Command;
 use yansi::Paint;
 
+// Main gradient function
 pub fn print_with_synthwave_gradient(text: String) {
     // Define the fire gradient colors
     let synth = vec![
@@ -38,6 +39,7 @@ pub fn clear_console() {
         .expect("Failed to clear console");
 }
 
+// Draws a divider with an input character
 pub fn divy(s: &str) {
     let line = s.repeat(20);
     println!("{}", line);
