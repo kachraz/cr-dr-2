@@ -55,7 +55,7 @@ fn vecs_1() {
 // Retrieving elements from a vector
 
 fn vecs2_get_item(index: usize) {
-    let index = 3; // Looks like int but is a usize
+    // Looks like int but is a usize
     let vec = vec![10, 20, 30, 40, 50];
 
     // Retrieve value at specific index
@@ -70,7 +70,7 @@ fn vecs2_get_item(index: usize) {
 
 fn vecs2_get_item_fn() {
     let vec = vec![10, 20, 30, 40, 50];
-    vecs2_get_item(3);
+    vecs2_get_item(1);
 }
 
 fn vecs_2() {
