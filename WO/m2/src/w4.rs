@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enum_5_2()
+    enum_6();
 }
 
 //////////////////////////////////////////
@@ -244,3 +244,14 @@ fn enum_5_2() {
 }
 
 //////////// Vectors and Enums ///////////////
+
+enum Shape {
+    Circle(f64),
+    Square(f64),
+}
+
+fn enum_6() {
+    let title = "Enums - Vectors";
+    header(title);
+    let shape = vec![Shape::Circle(5.0), Shape::Square(10.0)];
+}
