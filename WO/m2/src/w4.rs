@@ -220,10 +220,10 @@ enum FileSize2 {
 impl FileSize2 {
     fn format_size(&self) -> String {
         match self {
-            FileSize2::Bytes(b) => format!("{} Bytes", b),
-            FileSize2::Kilobytes(kb) => format!("{:.2} KB", *kb as f64 / 1000.0),
-            FileSize2::Megabytes(mb) => format!("{:.2} MB", *mb as f64 / 1000.0),
-            FileSize2::Gigabytes(gb) => format!("{:.2} GB", *gb as f64 / 1000.0),
+            FileSize2::Bytes(bytes) => format!("{} Bytes", bytes),
+            FileSize2::Kilobytes(kb) => format!("{:.2} KB", kb as f64 / 1000.0),
+            FileSize2::Megabytes(mb) => format!("{:.2} MB", mb as f64 / 1000.0),
+            FileSize2::Gigabytes(gb) => format!("{:.2} GB", gb as f64 / 1000.0),
         }
     }
 }
