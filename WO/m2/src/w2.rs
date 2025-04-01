@@ -19,6 +19,8 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
+    str_1("Hello, world!");
+    str_2("Hello, world!".to_string());
 }
 
 //////////////////////////////////////////
@@ -27,5 +29,10 @@ pub fn w2_main() {
 
 fn str_1(s: &str) {
     // Print the string
-    println!("String: {}", s);
+    println!("String: {}", s.green());
+}
+
+fn str_2(s: String) {
+    // Print the string
+    println!("String: {}", s.green());
 }
