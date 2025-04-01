@@ -53,6 +53,10 @@ fn vecs_1() {
 
 // Retrieving elements from a vector
 
+fn vecs2_get_item(index: usize) {
+    let index = 3;
+}
+
 fn vecs_2() {
     let hea1 = "Retreiving Elements from a Vector";
     header(hea1);
