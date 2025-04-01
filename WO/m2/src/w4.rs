@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enum_4();
+    enum_5()
 }
 
 //////////////////////////////////////////
@@ -172,7 +172,7 @@ fn enum_4() {
     }
 }
 
-// Applied Enums
+// Applied Enums -
 
 enum FileSize {
     Bytes(u64),
@@ -197,4 +197,7 @@ fn enum5_format_size(size: u64) -> String {
     }
 }
 
-fn enum_5() {}
+fn enum_5() {
+    let title = "Enums - File Size";
+    header(title);
+}
