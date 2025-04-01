@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enums_2();
+    enums_3();
 }
 
 //////////////////////////////////////////
@@ -125,3 +125,25 @@ fn enums_2() {
 }
 
 //////// Option Enum Testing ///////
+
+fn enum3_div(x: i32, y: i32) -> Option<i32> {
+    if x == 0 { None } else { Some(y / x) }
+}
+
+fn enum_3() {
+    let title = "Option Enum";
+    header(title);
+
+    let x = 0;
+    let y = 10;
+
+    // Using the enum
+    match enum3_div(x, y) {
+        Some(v) => println!("Result: {}", v),
+        None => println!("Division by zero!"),
+    }
+
+    divy("⚛");
+    let result = enum3_div(2, 10);
+    println!("Result: {:?}", result);
+}
