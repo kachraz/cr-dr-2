@@ -43,4 +43,10 @@ fn str_3() {
 
     let s = "Love is love";
     print_str(s);
+
+    // String is frowable and mutable where as str is not
+    // String is owned by the code that creates it
+
+    let salutation = String::from("Saluations");
+    print_string(salutation);
 }
