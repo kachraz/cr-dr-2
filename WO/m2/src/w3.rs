@@ -73,4 +73,14 @@ fn vecs_2() {
     divy("o");
     let first_value = vec[0]; // First value
     println!("First value: {}", first_value.to_string().green().italic());
+
+    // Retrieve first value using pattern matching
+    divy("o");
+    match vec.first() {
+        Some(first) => println!(
+            "First value using pattern matching: {}",
+            first.to_string().green().italic()
+        ),
+        None => println!("Vector is empty"),
+    }
 }
