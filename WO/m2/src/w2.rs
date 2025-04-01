@@ -90,6 +90,10 @@ fn strman_2() {
     header("String Manipulation - 2");
 
     let sent1 = "Dancing is good for the soul";
-    let description = format!("Title: Quick Start Guide\n {}", sent1.green().bold());
-    
+    let description = format!(
+        "Title: Quick Start Guide\n{}",
+        sent1.yellow().bold().italic()
+    );
+
+    println!("Description: {}", description.green());
 }
