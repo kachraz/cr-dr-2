@@ -45,6 +45,8 @@ fn vecs1_modifiable() {
 fn vecs_1() {
     header("Vector Operations");
 
+    // Slices and vectros are similar. But slices are immutable depending on how they are borrowed
+
     vecs1_ownership();
-    vecs1_modifiable();
+    // vecs1_modifiable();
 }
