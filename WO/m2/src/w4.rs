@@ -30,3 +30,15 @@ pub fn w4_main() {
 
     // Call the functions
 }
+
+//////////////////////////////////////////
+/// Sub Functions
+//////////////////////////////////////////
+
+enum Disktype {
+    SSD,
+    HDD,
+}
+
+#[derive(Debug)]
+fn enums_1() {}
