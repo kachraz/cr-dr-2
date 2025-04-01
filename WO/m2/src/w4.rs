@@ -253,7 +253,7 @@ enum Shape {
 fn enum_6() {
     let title = "Enums - Vectors";
     header(title);
-    let shape = vec![Shape::Circle(5.0), Shape::Square(10.0)];
+    let shape = vec![Shape::Circle(5.0125), Shape::Square(10.9875)];
 
     let tt_area: f64 = shape
         .iter()
@@ -263,5 +263,5 @@ fn enum_6() {
         })
         .sum();
 
-    println!("Total area: {}", tt_area.green());
+    println!("Total area: {} sq. units", tt_area.green());
 }
