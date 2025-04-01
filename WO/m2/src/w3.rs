@@ -70,17 +70,7 @@ fn vecs2_get_item(index: usize) {
 
 fn vecs2_get_item_fn() {
     let vec = vec![10, 20, 30, 40, 50];
-
-    // Get input to find the index
-    println!("Enter desired index: ");
-    let mut input = String::new();
-
-    let fail_msg = "Invalid input. Please enter a valid index."
-        .red()
-        .to_string();
-
-    std::io::stdin().read_line(&mut input).expect(&fail_msg);
-    vecs2_get_item(2);
+    vecs2_get_item(1);
 }
 
 fn vecs_2() {
