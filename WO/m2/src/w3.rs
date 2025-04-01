@@ -22,8 +22,7 @@ pub fn w3_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    // vecs_2();
-    vecs2_get_item_fn();
+    vecs_3();
 }
 
 //////////////////////////////////////////
