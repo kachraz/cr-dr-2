@@ -134,18 +134,16 @@ fn enum_3() {
     let title = "Option Enum";
     header(title);
 
-    let a = 10;
-    let b = 2;
+    let a = 3000;
+    let b = 20;
 
     let rez = enum3_div(a, b);
 
     // Using the enum
+    divy("⚛");
+    println!("{} / {} = ", a, b);
     match rez {
         Some(v) => println!("Result: {}", v.green()),
         None => println!("Division by zero!"),
     }
-
-    divy("⚛");
-    let result = enum3_div(2, 10);
-    println!("Result: {:?}", result);
 }
