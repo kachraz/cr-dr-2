@@ -35,7 +35,7 @@ fn print_str(s: &str) {
 // String type
 fn print_string(s: String) {
     // Print the string
-    println!("String: {}", s.green());
+    println!("String Type: {}", s.green());
 }
 
 fn str_3() {
