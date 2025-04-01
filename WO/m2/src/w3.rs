@@ -31,15 +31,15 @@ pub fn w3_main() {
 
 fn vecs1_ownership() {
     let numz = vec![1, 2, 3, 4, 5];
-    let slice = &numz[..]; // Borrowing a slice of the vector
-    println!("Slice: {:?}", slice.green().italic());
+    let slicez = &numz[..]; // Borrowing a slice of the vector
+    println!("Slicez: {:?}", slicez.green().italic());
 }
 
 fn vecs1_modifiable() {
-    let mut numbers = vec![1, 2, 3, 4, 5];
-    let slice = &mut numbers[..]; // Mutable slice
-    slice[0] = 10; // Modifying the first element
-    println!("Modified Slice: {:?}", slice.yellow().italic());
+    let mut numz = vec![1, 2, 3, 4, 5];
+    let slicez = &mut numz[..]; // Mutable slice
+    slicez[0] = 10; // Modifying the first element
+    println!("Modified Slicez: {:?}", slicez.yellow().italic());
 }
 
 fn vecs_1() {
