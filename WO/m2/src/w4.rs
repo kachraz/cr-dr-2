@@ -106,6 +106,14 @@ fn enums_2() {
         region: JusRegions::South,
     };
 
-    println!("Jus1 : {} from {:?}", jus1.name, jus1.region);
-    println!("Jus2 : {} from {:?}", jus2.name, jus2.region);
+    println!(
+        "Jus1 : {} from {:?}",
+        jus1.name.yellow(),
+        jus1.region.yellow()
+    );
+    println!(
+        "Jus2 : {} from {:?}",
+        jus2.name.green(),
+        jus2.region.green()
+    );
 }
