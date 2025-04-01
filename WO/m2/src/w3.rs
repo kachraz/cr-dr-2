@@ -104,3 +104,7 @@ fn vecs_2() {
         None => println!("Vector is empty"),
     }
 }
+
+// Adding and removing elements from a vector
+
+fn vecs_3() {}
