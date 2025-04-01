@@ -121,6 +121,7 @@ fn strman_3() {
     for c in sentence.chars() {
         match c {
             'a' | 'e' | 'i' | 'o' | 'u' => println!("{}", c.red()),
+            "bread" => println!("{}", c.blue()),
             _ => continue,
         }
     }
