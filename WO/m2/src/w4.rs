@@ -25,7 +25,8 @@ use yansi::Paint;
 
 pub fn w4_main() {
     clear_console();
-    print_with_synthwave_gradient("Strings".to_string());
+    let title = "Enums".to_string();
+    print_with_synthwave_gradient(title);
 
     // Call the functions
 }
