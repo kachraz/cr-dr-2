@@ -41,4 +41,10 @@ enum Disktype {
 }
 
 #[derive(Debug)]
+enum DiskSize {
+    KB(u32),
+    MB(u32),
+    GB(u32),
+}
+
 fn enums_1() {}
