@@ -60,6 +60,17 @@ fn vecs_2() {
     let vec = vec![1, 2, 3, 4, 5];
 
     // Retrieve value at specific index
-    divy("$");
+    divy("o");
     let third_value = vec[2]; // Indexing starts at 0
+    println!("Third value: {}", third_value.to_string().green().italic());
+
+    // Retrieve last value
+    divy("o");
+    let last_value = vec.last().unwrap();
+    println!("Last value: {}", last_value.to_string().green().italic());
+
+    // Retrieve first value
+    divy("o");
+    let first_value = vec[0]; // First value
+    println!("First value: {}", first_value.to_string().green().italic());
 }
