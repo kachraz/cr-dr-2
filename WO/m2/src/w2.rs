@@ -153,4 +153,14 @@ fn strman_4() {
 /// Vector basics
 /////////////////////////////
 
+fn vecs1_ownership() {
+    let numz = vec![1, 2, 3, 4, 5];
+    let slice = &numz[..]; // Borrowing a slice of the vector
+    println!("Slice: {:?}", slice.italic());
+}
+
+fn vecs1_modifiable() {
+    let mut numbers = vec![1, 2, 3, 4, 5];
+}
+
 fn vecs_1() {}
