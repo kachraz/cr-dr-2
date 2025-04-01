@@ -105,6 +105,7 @@ fn strman_3() {
 
     let sentence = "Vi Dango";
 
+    // Printing the color text on match
     println!("{}\n{}", "ColorText", divy.blue());
     for c in sentence.chars() {
         match c {
@@ -117,10 +118,11 @@ fn strman_3() {
         }
     }
 
+    // Matching a certain conditoon
     println!("{}\n{}", "Matcha and print", divy.blue());
     for c in sentence.chars() {
         match c {
-            'a' | 'e' | 'i' | 'o' | 'u' => println!("{}", c.red()),
+            'a' | 'e' | 'i' | 'o' | 'u' => println!("{} - Vowel", c.red()),
             _ => continue,
         }
     }
