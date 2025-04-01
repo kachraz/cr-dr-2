@@ -172,6 +172,7 @@ fn enum_4() {
     }
 }
 
+///////////////////////////////////////////////////////////////
 // Applied Enums -
 
 enum FileSize {
@@ -204,4 +205,33 @@ fn enum_5() {
 
     let result = enum5_format_size(854515558745688);
     println!("File size: {}", result.green());
+}
+
+// Second Version
+
+enum FileSize2 {
+    Bytes(u64),
+    Kilobytes(u64),
+    Megabytes(u64),
+    Gigabytes(u64),
+}
+
+// impl - Implementation block of the enum FileSize2
+impl FileSize2 {
+    fn format_size(&self) -> String {
+        match self {
+            FileSize2::Bytes(b) => format!("{} Bytes", b),
+            FileSize2::Kilobytes(kb) => format!("{:.2} KB", *kb as f64 / 1000.0),
+            FileSize2::Megabytes(mb) => format!("{:.2} MB", *mb as f64 / 1000.0),
+            FileSize2::Gigabytes(gb) => format!("{:.2} GB", *gb as f64 / 1000.0),
+        }
+    }
+}
+
+fn enum_5_2() {
+    let title = "Enums - File Size";
+    header(title);
+
+    let file_size = FileSize2::Bytes(854515558745688);
+    println!("File size: {}", file_size.format_size().green());
 }
