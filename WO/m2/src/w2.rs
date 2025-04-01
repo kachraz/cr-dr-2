@@ -105,7 +105,7 @@ fn strman_3() {
 
     let sentence = "Dancing is good for the soul";
 
-    println!("{}{}", divy, sentence.green());
+    println!("{}\n{}", "ColorText", divy.blue());
     for c in sentence.chars() {
         match c {
             'a' => print!("{}", c.red()),
