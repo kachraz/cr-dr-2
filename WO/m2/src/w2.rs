@@ -34,7 +34,9 @@ fn print_str(s: &str) {
 
 fn print_str_2(s: &str) {
     let mut new_string = s.to_string();
-    new_string.push_str(" is a string slice");
+
+    // Note - this is how to add to a existing string object
+    new_string.push_str(" is a string slice 🦧🦧🦧🦧");
     println!("String Slice: {}", new_string.green());
 }
 
