@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enum_5()
+    enum_5_2()
 }
 
 //////////////////////////////////////////
@@ -229,9 +229,16 @@ impl FileSize2 {
 }
 
 fn enum_5_2() {
-    let title = "Enums - File Size";
+    let title = "Enums - File Size 2";
     header(title);
 
-    let file_size = FileSize2::Bytes(854515558745688);
-    println!("File size: {}", file_size.format_size().green());
+    let size = 2_000_000_000;
+    let filesize = match size {
+        0..=999 => FileSize2::Bytes(size),
+        1000..=999_999 => FileSize2::Kilobytes(size / 1000),
+        1_000_000..=999_999_999 => FileSize2::Megabytes(size / 1_000_000),
+        _ => FileSize2::Gigabytes(size / 1_000_000_000),
+    };
+
+    println!("File size: {}", filesize.format_size().green());
 }
