@@ -70,9 +70,14 @@ fn enums_1() {
 /////////// Enm2 /////////
 
 #[derive(Debug)]
-enum JusRegions() {
+enum JusRegions {
     North,
     South,
     East,
     West,
+}
+
+struct Juse {
+    name: String,
+    region: JusRegions, // uice regions used as a type
 }
