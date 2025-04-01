@@ -28,4 +28,17 @@ pub fn w3_main() {
 /// Vector Related Ops
 //////////////////////////////////////////
 
+fn vecs1_ownership() {
+    let numz = vec![1, 2, 3, 4, 5];
+    let slice = &numz[..]; // Borrowing a slice of the vector
+    println!("Slice: {:?}", slice.italic());
+}
 
+fn vecs1_modifiable() {
+    let mut numbers = vec![1, 2, 3, 4, 5];
+    let slice = &mut numbers[..]; // Mutable slice
+    slice[0] = 10; // Modifying the first element
+    println!("Modified Slice: {:?}", slice.italic());
+}
+
+fn vecs_1() {}
