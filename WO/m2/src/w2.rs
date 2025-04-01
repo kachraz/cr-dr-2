@@ -25,10 +25,7 @@ pub fn w2_main() {
 /// Functions Areas
 //////////////////////////////////////////
 
-fn str_1() {
-    header("Strings Function 1");
-    let s1 = String::from("Hello");
-    let s2 = String::from("World");
-    let s3 = format!("{} {}", s1, s2);
-    println!("{}", s3);
+fn str_1(s: &str) {
+    // Print the string
+    println!("String: {}", s);
 }
