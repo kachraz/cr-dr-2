@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enum_6();
+    enum_7();
 }
 
 //////////////////////////////////////////
@@ -264,4 +264,30 @@ fn enum_6() {
         .sum();
 
     println!("Total area: {} sq. units", tt_area.green());
+}
+
+///////////////// Demo Exhaustive Matches ///////////////
+
+enum IceCreams {
+    Vanilla,
+    Chocolate,
+    Strawberry,
+    Mint,
+}
+
+fn taste_icecream(ice_creams: IceCreams) {
+    match ice_creams {
+        IceCreams::Vanilla => println!("Vanilla ice cream is delicious!"),
+        IceCreams::Chocolate => println!("Chocolate ice cream is rich and creamy!"),
+        IceCreams::Strawberry => println!("Strawberry ice cream is fruity and refreshing!"),
+        IceCreams::Mint => println!("Mint ice cream is cool and refreshing!"),
+    }
+}
+
+fn enum_7() {
+    let title = "Enums - Exhaustive Matches";
+    header(title);
+
+    let ice_cream = IceCreams::Chocolate;
+    taste_icecream(ice_cream);
 }
