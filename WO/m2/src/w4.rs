@@ -171,3 +171,14 @@ fn enum_4() {
         None => println!("Division by zero!"),
     }
 }
+
+// Applied Enums
+
+enum FileSize {
+    Bytest(u64),
+    KB(u64),
+    MB(u64),
+    GB(u64),
+}
+
+fn enum_5() {}
