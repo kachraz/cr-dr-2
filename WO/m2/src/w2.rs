@@ -127,3 +127,5 @@ fn strman_3() {
         }
     }
 }
+
+// Splitting and collecting in a vector
