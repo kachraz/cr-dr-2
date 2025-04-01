@@ -42,6 +42,7 @@ fn print_str_2(s: &str) {
 
 // formatting string
 fn print_formatted_string(s: &str) {
+    // format! = This returns a string slice that can be stored in a variable
     let new_string = format!("{} is a string slice", s.magenta());
     println!("Formatted String: {}", new_string.green());
 }
