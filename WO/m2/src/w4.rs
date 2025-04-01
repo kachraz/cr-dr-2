@@ -148,14 +148,18 @@ fn enum_3() {
     }
 }
 
+fn enum4_div(x: f32, y: f32) -> Option<f32> {
+    if y == 0.0 { None } else { Some(x / y) }
+}
+
 fn enum_4() {
     let title = "Option Enum";
     header(title);
 
-    let a: f32 = 3000;
-    let b = 10;
+    let a: f32 = 3000.22;
+    let b: f32 = 100.1234;
 
-    let rez = enum3_div(a, b);
+    let rez = enum4_div(a, b);
 
     // Using the enum
     divy("⚛");
