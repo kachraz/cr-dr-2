@@ -262,4 +262,6 @@ fn enum_6() {
             Shape::Square(side) => side * side,
         })
         .sum();
+
+    println!("Total area: {}", tt_area.green());
 }
