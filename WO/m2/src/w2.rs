@@ -129,3 +129,8 @@ fn strman_3() {
 }
 
 // Splitting and collecting in a vector
+fn strman_4() {
+    header("String Manipulation - Split by words");
+
+    let sentence = "Splitting a string into words";
+}
