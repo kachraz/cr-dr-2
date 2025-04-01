@@ -29,6 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
+    enums_2();
 }
 
 //////////////////////////////////////////
@@ -83,9 +84,15 @@ struct Juse {
     region: JusRegions, // uice regions used as a type
 }
 
+// Running the pattern matching on the enum
 fn enums_2_supported_regions(j: JusRegions) {
     match j {
         JusRegions::East => println!("{}", "East region is supported".yellow()),
         _ => println!("{}", "Other regions are not supported".red()),
     }
+}
+
+fn enums_2() {
+    let title = "Jus Regions";
+    header(title);
 }
