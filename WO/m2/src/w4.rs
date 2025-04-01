@@ -89,7 +89,7 @@ fn enums_2_supported_regions(j: JusRegions) {
     // Pattern matching one condition - you can add multiple here
     match j {
         JusRegions::East => println!("{}", "East region is supported".yellow()),
-        _ => println!("{}", "Other regions are not supported".red()),
+        _ => println!("{}", j, "Other regions are not supported".red()),
     }
 }
 
