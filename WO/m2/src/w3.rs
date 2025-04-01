@@ -66,7 +66,7 @@ fn vecs_2() {
 
     // Retrieve last value
     divy("o");
-    let last_value = vec.last().unwrap();
+    let last_value = vec.frist().unwrap();
     println!("Last value: {}", last_value.to_string().green().italic());
 
     // Retrieve first value
