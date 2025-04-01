@@ -21,7 +21,7 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
-    strman_2();
+    strman_3();
 }
 
 //////////////////////////////////////////
@@ -85,7 +85,6 @@ fn strman_1() {
 }
 
 // Concatenation with formatting
-
 fn strman_2() {
     header("String Manipulation - 2");
 
@@ -96,4 +95,9 @@ fn strman_2() {
     );
 
     println!("Description: {}", description.green());
+}
+
+// Iteration over characters
+fn strman_3() {
+    header("String Manipulation\nIteration over Characters");
 }
