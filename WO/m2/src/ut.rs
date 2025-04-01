@@ -37,3 +37,8 @@ pub fn clear_console() {
         .status()
         .expect("Failed to clear console");
 }
+
+pub fn divy(s: &str) {
+    let line = s.repeat(20);
+    println!("{}", line);
+}
