@@ -7,6 +7,8 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
+use std::fmt::format;
+
 use crate::ut::{clear_console, header, print_with_synthwave_gradient};
 use yansi::Paint;
 
@@ -80,4 +82,12 @@ fn strman_1() {
 
     let sentence = "Dancing is good for the soul";
     println!("Sentence Slice: {}", &sentence[0..=3].green());
+}
+
+// Concatenation with formatting
+
+fn strman_2() {
+    header("String Manipulation - 2");
+
+    let description = format!("Title: Quick Start Guide\n {}");
 }
