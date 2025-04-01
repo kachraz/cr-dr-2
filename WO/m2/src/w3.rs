@@ -70,6 +70,11 @@ fn vecs2_get_item(index: usize) {
 
 fn vecs2_get_item_fn() {
     let vec = vec![10, 20, 30, 40, 50];
+    println!("Enter desired index: ");
+    let mut input = String::new();
+    std::io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
     vecs2_get_item(2);
 }
 
