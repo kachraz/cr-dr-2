@@ -19,20 +19,28 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
-    str_1("Hello, world!");
-    str_2("Hello, world!".to_string());
+    str_3();
 }
 
 //////////////////////////////////////////
 /// Functions Areas
 //////////////////////////////////////////
 
-fn str_1(s: &str) {
+// String slices
+fn print_str(s: &str) {
+    // Print the string
+    println!("String Slice: {}", s.green());
+}
+
+// String type
+fn print_string(s: String) {
     // Print the string
     println!("String: {}", s.green());
 }
 
-fn str_2(s: String) {
-    // Print the string
-    println!("String: {}", s.green());
+fn str_3() {
+    header("String Manipulation");
+
+    let s = "Love is love";
+    print_str(s);
 }
