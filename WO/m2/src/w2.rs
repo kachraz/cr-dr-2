@@ -32,6 +32,12 @@ fn print_str(s: &str) {
     println!("String Slice: {}", s.green());
 }
 
+fn print_str_2(s: &str) {
+    let mut new_string = s.to_string();
+    new_string.push_str(" is a string slice");
+    println!("String Slice: {}", new_string.green());
+}
+
 // String type
 fn print_string(s: String) {
     // Print the string
@@ -49,4 +55,6 @@ fn str_3() {
 
     let salutation = String::from("Saluations");
     print_string(salutation);
+
+    print_str_2(s);
 }
