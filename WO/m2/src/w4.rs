@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enums_3();
+    enum_3();
 }
 
 //////////////////////////////////////////
@@ -134,11 +134,13 @@ fn enum_3() {
     let title = "Option Enum";
     header(title);
 
-    let x = 0;
-    let y = 10;
+    let a = 40;
+    let b = 10;
+
+    let rez = enum3_div(a, b);
 
     // Using the enum
-    match enum3_div(x, y) {
+    match rez {
         Some(v) => println!("Result: {}", v),
         None => println!("Division by zero!"),
     }
