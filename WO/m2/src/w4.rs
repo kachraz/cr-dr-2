@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enum_3();
+    enum_4();
 }
 
 //////////////////////////////////////////
@@ -147,6 +147,8 @@ fn enum_3() {
         None => println!("Division by zero!"),
     }
 }
+
+// enum3 function but with float values
 
 fn enum4_div(x: f32, y: f32) -> Option<f32> {
     if y == 0.0 { None } else { Some(x / y) }
