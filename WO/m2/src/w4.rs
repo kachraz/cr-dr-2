@@ -29,7 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enum_7();
+    enum_7_2();
 }
 
 //////////////////////////////////////////
@@ -275,6 +275,7 @@ enum IceCreams {
     Mint,
 }
 
+// Match expects exhaustive matches or throws an error
 fn taste_icecream(ice_creams: IceCreams) {
     match ice_creams {
         IceCreams::Vanilla => println!("Vanilla ice cream is delicious!"),
@@ -283,8 +284,22 @@ fn taste_icecream(ice_creams: IceCreams) {
         IceCreams::Mint => println!("Mint ice cream is cool and refreshing!"),
     }
 }
+fn taste_icecream2(ice_creams: IceCreams) {
+    match ice_creams {
+        IceCreams::Vanilla => println!("Vanilla ice cream is delicious!"),
+        _ => println!("Other flavors are also good!"),
+    }
+}
 
 fn enum_7() {
+    let title = "Enums - Exhaustive Matches";
+    header(title);
+
+    let ice_cream = IceCreams::Chocolate;
+    taste_icecream(ice_cream);
+}
+
+fn enum_7_2() {
     let title = "Enums - Exhaustive Matches";
     header(title);
 
