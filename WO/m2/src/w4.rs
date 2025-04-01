@@ -218,7 +218,7 @@ enum FileSize2 {
 
 // impl - Implementation block of the enum FileSize2
 impl FileSize2 {
-    fn format_size(&self) -> String {
+    fn format_size2(&self) -> String {
         match self {
             FileSize2::Bytes(bytes) => format!("{} Bytes", bytes),
             FileSize2::Kilobytes(kb) => format!("{:.2} KB", kb as f64 / 1000.0),
@@ -240,5 +240,5 @@ fn enum_5_2() {
         _ => FileSize2::Gigabytes(size / 1_000_000_000),
     };
 
-    println!("File size 2: {}", filesize.format_size().green());
+    println!("File size 2: {}", filesize.format_size2().green());
 }
