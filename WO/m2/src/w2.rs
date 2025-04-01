@@ -103,7 +103,7 @@ fn strman_3() {
 
     let divy = "~_~".repeat(10);
 
-    let sentence = "Dancing is good for the soul";
+    let sentence = "Dancing is good for the soul".to_string();
 
     println!("{}\n{}", "ColorText", divy.blue());
     for c in sentence.chars() {
@@ -114,6 +114,14 @@ fn strman_3() {
             'o' => print!("{}", c.yellow()),
             'u' => print!("{}", c.cyan()),
             _ => print!("{}", c),
+        }
+    }
+
+    println!("{}\n{}", "Printing Vowels", divy.blue());
+    for c in sentence.chars() {
+        match c {
+            "a" | "e" | "i" | "o" | "u" => print!("{}", c.red()),
+            _ => continue,
         }
     }
 }
