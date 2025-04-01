@@ -134,6 +134,7 @@ fn strman_4() {
 
     let sentence = "Splitting a string into words";
     let sen2 = "Split Methods Two";
+    let sen3 = "String Reverser";
 
     // Using vectors
     let words: Vec<&str> = sentence.split_whitespace().collect();
@@ -142,4 +143,8 @@ fn strman_4() {
     //Second method of doign the above
     let words2 = sen2.split(' ').collect::<Vec<&str>>();
     println!("Words2: {:?}", words2.yellow());
+
+    //String reversed
+    let rev1 = sen3.chars().rev().collect::<String>();
+    println!("Reversed: {}", rev1.red());
 }
