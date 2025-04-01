@@ -74,9 +74,10 @@ fn str_3() {
 /// String Maniuplation
 //////////////////////////////////////////////
 
+// Making String Slices
 fn strman_1() {
     header("String Manipulation - 1");
 
     let sentence = "Dancing is good for the soul";
-    println!("Sentence: {}", sentence.green());
+    println!("Sentence Slice: {}", &sentence[0..=3].green());
 }
