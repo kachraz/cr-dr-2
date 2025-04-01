@@ -141,4 +141,5 @@ fn strman_4() {
 
     //Second method of doign the above
     let words2 = sen2.split(' ').collect::<Vec<&str>>();
+    println!("Words2: {:?}", words2.yellow());
 }
