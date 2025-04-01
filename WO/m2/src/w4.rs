@@ -185,10 +185,11 @@ fn enum5_format_size(size: u64) -> String {
     let filesize = match size {
         0..=999 => FileSize::Bytes(size),
         1000..=999_999 => FileSize::Kilobytes(size / 1000),
-        1_000_000..999_999_999 => FileSize::Megabytes(size / 1_000_000),
+        1_000_000..=999_999_999 => FileSize::Megabytes(size / 1_000_000),
         _ => FileSize::Gigabytes(size / 1_000_000_000),
     };
 
+    // Formatting the above outputut
     match filesize {
         FileSize::Bytes(b) => format!("{} Bytes", b),
         FileSize::Kilobytes(kb) => format!("{:.2} KB", kb as f64 / 1000.0),
@@ -200,4 +201,15 @@ fn enum5_format_size(size: u64) -> String {
 fn enum_5() {
     let title = "Enums - File Size";
     header(title);
+
+    let file_sizes = vec![500, 1500, 1_500_000, 2_000_000_000];
+    let mut formatted_sizes = vec![];
+    for size in file_sizes {
+        formatted_sizes.push(enum5_format_size(size));
+    }
+    divy("⚛");
+    println!("Formatted file sizes:");
+    for size in formatted_sizes {
+        println!("{}", size.green());
+    }
 }
