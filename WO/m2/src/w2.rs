@@ -103,7 +103,7 @@ fn strman_3() {
 
     let divy = "~_~".repeat(10);
 
-    let sentence = "Dancing is good for the soul";
+    let sentence = "Vi Dango";
 
     println!("{}\n{}", "ColorText", divy.blue());
     for c in sentence.chars() {
