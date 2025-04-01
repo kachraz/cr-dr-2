@@ -52,11 +52,13 @@ fn enums_1() {
     let title = "Enums And Pattern Matching";
     header(title);
 
-    let disk_type = Disktype::HDD;
+    let disk_type = Disktype::SSD;
 
     // Comparing disk types - Using match
     match disk_type {
-        Disktype::SSD => println!("{}", "Disk type is SSD".green().bold()),
-        Disktype::HDD => println!("{}", "Disk type is HDD".red().bold().blink()),
+        Disktype::SSD => println!("{}", "Disk type is SSD".green().blink()),
+        Disktype::HDD => println!("{}", "Disk type is HDD".bright_yellow().bold().blink()),
     }
+
+    let disk_size = DiskSize::GB(500);
 }
