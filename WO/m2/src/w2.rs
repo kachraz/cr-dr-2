@@ -7,7 +7,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::fmt::format;
+use std::{fmt::format, vec};
 
 use crate::ut::{clear_console, header, print_with_synthwave_gradient};
 use yansi::Paint;
@@ -21,7 +21,7 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
-    strman_4();
+    vecs_1();
 }
 
 //////////////////////////////////////////
@@ -161,6 +161,9 @@ fn vecs1_ownership() {
 
 fn vecs1_modifiable() {
     let mut numbers = vec![1, 2, 3, 4, 5];
+    let slice = &mut numbers[..]; // Mutable slice
+    slice[0] = 10; // Modifying the first element
+    println!("Modified Slice: {:?}", slice.italic());
 }
 
 fn vecs_1() {}
