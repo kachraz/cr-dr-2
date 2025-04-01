@@ -22,6 +22,7 @@ pub fn w3_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
+    vecs_1();
 }
 
 //////////////////////////////////////////
@@ -31,14 +32,19 @@ pub fn w3_main() {
 fn vecs1_ownership() {
     let numz = vec![1, 2, 3, 4, 5];
     let slice = &numz[..]; // Borrowing a slice of the vector
-    println!("Slice: {:?}", slice.italic());
+    println!("Slice: {:?}", slice.green().italic());
 }
 
 fn vecs1_modifiable() {
     let mut numbers = vec![1, 2, 3, 4, 5];
     let slice = &mut numbers[..]; // Mutable slice
     slice[0] = 10; // Modifying the first element
-    println!("Modified Slice: {:?}", slice.italic());
+    println!("Modified Slice: {:?}", slice.yellow().italic());
 }
 
-fn vecs_1() {}
+fn vecs_1() {
+    header("Vector Operations");
+
+    vecs1_ownership();
+    vecs1_modifiable();
+}
