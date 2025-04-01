@@ -75,11 +75,11 @@ fn vecs2_get_item_fn() {
     println!("Enter desired index: ");
     let mut input = String::new();
 
-    let fail_msg = "Invalid input. Please enter a valid index.".red();
+    let fail_msg = "Invalid input. Please enter a valid index."
+        .red()
+        .to_string();
 
-    std::io::stdin()
-        .read_line(&mut input)
-        .expect(fail_msg.to_string());
+    std::io::stdin().read_line(&mut input).expect(&fail_msg);
     vecs2_get_item(2);
 }
 
