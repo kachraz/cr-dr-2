@@ -29,6 +29,7 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
+    enums_1();
 }
 
 //////////////////////////////////////////
@@ -50,5 +51,9 @@ enum DiskSize {
 fn enums_1() {
     let disk_type = Disktype::SSD;
 
-    // Comparing disk types
+    // Comparing disk types - Using match
+    match disk_type {
+        Disktype::SSD => println!("Disk type is SSD"),
+        Disktype::HDD => println!("Disk type is HDD"),
+    }
 }
