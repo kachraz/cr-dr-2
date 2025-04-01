@@ -59,7 +59,7 @@ fn vecs_2() {
 
     let vec = vec![1, 2, 3, 4, 5];
 
-    divy("*");
-
-    //
+    // Retrieve value at specific index
+    divy("$");
+    let third_value = vec[2]; // Indexing starts at 0
 }
