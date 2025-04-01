@@ -64,5 +64,15 @@ fn enums_1() {
 
     divy("⚛");
     let disk_size = DiskSize::GB(500);
-    println!("Disk size is {:?}", disk_size);
+    println!("Disk size is {:?}", disk_size.blue());
+}
+
+/////////// Enm2 /////////
+
+#[derive(Debug)]
+enum JusRegions() {
+    North,
+    South,
+    East,
+    West,
 }
