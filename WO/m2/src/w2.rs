@@ -19,7 +19,7 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
-    str_3();
+    strman_1();
 }
 
 //////////////////////////////////////////
@@ -71,5 +71,12 @@ fn str_3() {
 }
 
 //////////////////////////////////////////////
-/// String Maniupation
+/// String Maniuplation
 //////////////////////////////////////////////
+
+fn strman_1() {
+    header("String Manipulation - 1");
+
+    let sentence = "Dancing is good for the soul";
+    println!("Sentence: {}", sentence.green());
+}
