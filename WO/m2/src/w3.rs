@@ -38,7 +38,7 @@ fn vecs1_ownership() {
 fn vecs1_modifiable() {
     let mut numz = vec![1, 2, 3, 4, 5];
     let slicez = &mut numz[..]; // Mutable slice
-    slicez[0] = 10; // Modifying the first element
+    slicez[0] = 91230; // Modifying the first element
     println!("Modified Slicez: {:?}", slicez.yellow().italic());
 }
 
@@ -47,6 +47,6 @@ fn vecs_1() {
 
     // Slices and vectros are similar. But slices are immutable depending on how they are borrowed
 
-    vecs1_ownership();
-    // vecs1_modifiable();
+    // vecs1_ownership();
+    vecs1_modifiable();
 }
