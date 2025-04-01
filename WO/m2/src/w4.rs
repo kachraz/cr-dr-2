@@ -181,6 +181,13 @@ enum FileSize {
     Gigabytes(u64),
 }
 
-fn enum5_format_size(size: u64) -> String {}
+fn enum5_format_size(size: u64) -> String {
+    let file_size = match size {
+        0..999 => FileSize::Bytes(size),
+        1000..999_999 => FileSize::Kilobytes(size / 1000),
+        1_000_000..999_999_999 => FileSize::Megabytes(size / 1_000_000),
+        _ => FileSize::Gigabytes(size / 1_000_000_000),
+    };
+}
 
 fn enum_5() {}
