@@ -68,6 +68,7 @@ fn enums_1() {
 
 /////////// Enm2 /////////
 
+// Main Enum
 #[derive(Debug)]
 enum JusRegions {
     North,
@@ -76,6 +77,7 @@ enum JusRegions {
     West,
 }
 
+// Using enum as a type in this struct
 struct Juse {
     name: String,
     region: JusRegions, // uice regions used as a type
