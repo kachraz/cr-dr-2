@@ -17,7 +17,6 @@ use yansi::Paint;
 //////////////////////////////////////////
 
 pub fn w3_main() {
-    clear_console();
     let title = "Vector and Ops".to_string();
     print_with_synthwave_gradient(title);
 
@@ -150,11 +149,6 @@ fn vecs_3() {
         v.yellow().italic(),
         last_value.unwrap_or(0).to_string().green().italic()
     );
-
-    // Clearing the vector
-    divy("o");
-    v.clear();
-    println!("After clear: {:?}", v.yellow().italic());
 
     // Checking if the vector is empty
     divy("o");
