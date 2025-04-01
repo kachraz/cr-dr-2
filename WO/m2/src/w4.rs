@@ -86,6 +86,7 @@ struct Juse {
 
 // Running the pattern matching on the enum
 fn enums_2_supported_regions(j: JusRegions) {
+    // Pattern matching one condition - you can add multiple here
     match j {
         JusRegions::East => println!("{}", "East region is supported".yellow()),
         _ => println!("{}", "Other regions are not supported".red()),
@@ -118,5 +119,5 @@ fn enums_2() {
     );
 
     enums_2_supported_regions(jus1.region);
-    enums_2_supported_regions(jus2.region);
+    enums_2_supported_regions(JusRegions::East);
 }
