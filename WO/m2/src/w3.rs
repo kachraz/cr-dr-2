@@ -70,7 +70,7 @@ fn vecs2_get_item(index: usize) {
 
 fn vecs2_get_item_fn() {
     let vec = vec![10, 20, 30, 40, 50];
-    vecs2_get_item(1);
+    vecs2_get_item(3);
 }
 
 fn vecs_2() {
