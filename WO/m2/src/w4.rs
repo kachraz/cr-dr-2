@@ -221,9 +221,9 @@ impl FileSize2 {
     fn format_size2(&self) -> String {
         match self {
             FileSize2::Bytes(bytes) => format!("{} Bytes", bytes),
-            FileSize2::Kilobytes(kb) => format!("{:.2} KB", kb as f64 / 1000.0),
-            FileSize2::Megabytes(mb) => format!("{:.2} MB", mb as f64 / 1000.0),
-            FileSize2::Gigabytes(gb) => format!("{:.2} GB", gb as f64 / 1000.0),
+            FileSize2::Kilobytes(kb) => format!("{:.2} KB", *kb as f64 / 1000.0),
+            FileSize2::Megabytes(mb) => format!("{:.2} MB", *mb as f64 / 1000.0),
+            FileSize2::Gigabytes(gb) => format!("{:.2} GB", *gb as f64 / 1000.0),
         }
     }
 }
@@ -232,7 +232,7 @@ fn enum_5_2() {
     let title = "Enums - File Size 2";
     header(title);
 
-    let size = 2_000_000_000;
+    let size = 1000000032165;
     let filesize = match size {
         0..=999 => FileSize2::Bytes(size),
         1000..=999_999 => FileSize2::Kilobytes(size / 1000),
