@@ -16,7 +16,7 @@
 
 use std::{fmt::format, vec};
 
-use crate::ut::{clear_console, header, print_with_synthwave_gradient};
+use crate::ut::{clear_console, divy, header, print_with_synthwave_gradient};
 use yansi::Paint;
 
 //////////////////////////////////////////
@@ -36,7 +36,7 @@ pub fn w4_main() {
 /// Sub Functions
 //////////////////////////////////////////
 
-enum Disktype {
+enum DiskType {
     SSD,
     HDD,
 }
@@ -52,13 +52,15 @@ fn enums_1() {
     let title = "Enums And Pattern Matching";
     header(title);
 
-    let disk_type = Disktype::SSD;
+    let disk_type = DiskType::SSD;
 
     // Comparing disk types - Using match
     match disk_type {
-        Disktype::SSD => println!("{}", "Disk type is SSD".green().blink()),
-        Disktype::HDD => println!("{}", "Disk type is HDD".bright_yellow().bold().blink()),
+        DiskType::SSD => println!("{}", "Disk type is SSD".green().blink()),
+        DiskType::HDD => println!("{}", "Disk type is HDD".bright_yellow().bold().blink()),
     }
 
+    divy(".");
     let disk_size = DiskSize::GB(500);
+    println!("Disk size is {:?}", disk_size);
 }
