@@ -117,11 +117,10 @@ fn strman_3() {
         }
     }
 
-    println!("{}\n{}", "Printing Vowels", divy.blue());
+    println!("{}\n{}", "Matcha and print", divy.blue());
     for c in sentence.chars() {
         match c {
             'a' | 'e' | 'i' | 'o' | 'u' => println!("{}", c.red()),
-            "bread" => println!("{}", c.blue()),
             _ => continue,
         }
     }
