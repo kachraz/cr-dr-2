@@ -21,7 +21,7 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
-    strman_1();
+    strman_2();
 }
 
 //////////////////////////////////////////
@@ -89,5 +89,7 @@ fn strman_1() {
 fn strman_2() {
     header("String Manipulation - 2");
 
-    let description = format!("Title: Quick Start Guide\n {}");
+    let sent1 = "Dancing is good for the soul";
+    let description = format!("Title: Quick Start Guide\n {}", sent1.green().bold());
+    
 }
