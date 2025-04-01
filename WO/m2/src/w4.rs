@@ -95,4 +95,17 @@ fn enums_2_supported_regions(j: JusRegions) {
 fn enums_2() {
     let title = "Jus Regions";
     header(title);
+
+    let jus1 = Juse {
+        name: String::from("North Juice"),
+        region: JusRegions::North,
+    };
+
+    let jus2 = Juse {
+        name: String::from("South Juice"),
+        region: JusRegions::South,
+    };
+
+    println!("Jus1 : {} from {:?}", jus1.name, jus1.region);
+    println!("Jus2 : {} from {:?}", jus2.name, jus2.region);
 }
