@@ -240,5 +240,5 @@ fn enum_5_2() {
         _ => FileSize2::Gigabytes(size / 1_000_000_000),
     };
 
-    println!("File size: {}", filesize.format_size().green());
+    println!("File size 2: {}", filesize.format_size().green());
 }
