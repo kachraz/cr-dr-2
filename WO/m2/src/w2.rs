@@ -148,3 +148,9 @@ fn strman_4() {
     let rev1 = sen3.chars().rev().collect::<String>();
     println!("Reversed: {}", rev1.red());
 }
+
+/////////////////////////////
+/// Vector basics
+/////////////////////////////
+
+fn vecs_1() {}
