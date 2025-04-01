@@ -14,7 +14,7 @@
 #![allow(unused_imports)]
 #![allow(unused_variables)]
 
-use std::{fmt::format, vec};
+use std::{fmt::format, result, vec};
 
 use crate::ut::{clear_console, divy, header, print_with_synthwave_gradient};
 use yansi::Paint;
@@ -202,14 +202,6 @@ fn enum_5() {
     let title = "Enums - File Size";
     header(title);
 
-    let file_sizes = vec![500, 1500, 1_500_000, 2_000_000_000];
-    let mut formatted_sizes = vec![];
-    for size in file_sizes {
-        formatted_sizes.push(enum5_format_size(size));
-    }
-    divy("⚛");
-    println!("Formatted file sizes:");
-    for size in formatted_sizes {
-        println!("{}", size.green());
-    }
+    let result = enum5_format_size(854515558745688);
+    println!("File size: {}", result.green());
 }
