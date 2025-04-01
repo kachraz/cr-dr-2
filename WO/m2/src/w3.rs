@@ -53,4 +53,9 @@ fn vecs_1() {
 
 // Retrieving elements from a vector
 
-fn vecs_2() {}
+fn vecs_2() {
+    let hea1 = "Retreiving Elements from a Vector";
+    header(hea1);
+
+    let vec = vec![1, 2, 3, 4, 5];
+}
