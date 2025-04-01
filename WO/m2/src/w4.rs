@@ -29,7 +29,6 @@ pub fn w4_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    enums_1();
 }
 
 //////////////////////////////////////////
@@ -84,6 +83,7 @@ struct Juse {
 
 fn enums_2_supported_regions(j: JusRegions) {
     match j {
-        JusRegions::East => println!("East region is supported".yellow()),
+        JusRegions::East => println!("{}", "East region is supported".yellow()),
+        _ => println!("{}", "Other regions are not supported".red()),
     }
 }
