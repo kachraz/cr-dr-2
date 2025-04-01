@@ -127,7 +127,7 @@ fn enums_2() {
 //////// Option Enum Testing ///////
 
 fn enum3_div(x: i32, y: i32) -> Option<i32> {
-    if x == 0 { None } else { Some(y / x) }
+    if y == 0 { None } else { Some(x / y) }
 }
 
 fn enum_3() {
@@ -135,7 +135,7 @@ fn enum_3() {
     header(title);
 
     let a = 10;
-    let b = 40;
+    let b = 2;
 
     let rez = enum3_div(a, b);
 
