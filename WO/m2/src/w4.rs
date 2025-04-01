@@ -49,6 +49,9 @@ enum DiskSize {
 }
 
 fn enums_1() {
+    let title = "Enums And Pattern Matching";
+    header(title);
+
     let disk_type = Disktype::SSD;
 
     // Comparing disk types - Using match
