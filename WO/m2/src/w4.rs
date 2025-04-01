@@ -135,7 +135,7 @@ fn enum_3() {
     header(title);
 
     let a = 3000;
-    let b = 20;
+    let b = 10;
 
     let rez = enum3_div(a, b);
 
@@ -143,7 +143,7 @@ fn enum_3() {
     divy("⚛");
     println!("{} / {} = ", a, b);
     match rez {
-        Some(v) => println!("Result: {}", v.green()),
+        Some(v) => println!("Result: {}", rez.green()),
         None => println!("Division by zero!"),
     }
 }
