@@ -112,7 +112,14 @@ fn vecs_3() {
 
     let mut v = vec![1, 2];
 
+    // Adding elements to the vector
     divy("o");
     v.push(99);
     println!("After push: {:?}", v.yellow().italic());
+
+    // Extending the vector
+    divy("o");
+    let more_numz = vec![3, 4, 5];
+    v.extend(more_numz);
+    println!("After extend: {:?}", v.yellow().italic());
 }
