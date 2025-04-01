@@ -81,3 +81,9 @@ struct Juse {
     name: String,
     region: JusRegions, // uice regions used as a type
 }
+
+fn enums_2_supported_regions(j: JusRegions) {
+    match j {
+        JusRegions::East => println!("East region is supported".yellow()),
+    }
+}
