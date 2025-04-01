@@ -36,6 +36,8 @@ pub fn w4_main() {
 /// Sub Functions
 //////////////////////////////////////////
 
+// enum1
+
 enum DiskType {
     SSD,
     HDD,
