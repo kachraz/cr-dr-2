@@ -254,4 +254,7 @@ fn enum_6() {
     let title = "Enums - Vectors";
     header(title);
     let shape = vec![Shape::Circle(5.0), Shape::Square(10.0)];
+
+    let tt_area:f64 = shape.iter()
+    .map
 }
