@@ -40,6 +40,12 @@ fn print_str_2(s: &str) {
     println!("String Slice: {}", new_string.green());
 }
 
+// formatting string
+fn print_formatted_string(s: &str) {
+    let new_string = format!("{} is a string slice", s.magenta());
+    println!("Formatted String: {}", new_string.green());
+}
+
 // String type
 fn print_string(s: String) {
     // Print the string
@@ -59,4 +65,6 @@ fn str_3() {
     print_string(salutation);
 
     print_str_2(s);
+
+    print_formatted_string(s);
 }
