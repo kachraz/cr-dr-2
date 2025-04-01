@@ -60,7 +60,7 @@ fn vecs2_get_item(index: usize) {
 
     // Retrieve value at specific index
     divy("o");
-    let value = vec[index]; // Indexing starts at 0
+    let value = vec.get(index).unwrap(); // Indexing starts at 0
     println!(
         "Value at index {}: {}",
         index,
@@ -70,7 +70,7 @@ fn vecs2_get_item(index: usize) {
 
 fn vecs2_get_item_fn() {
     let vec = vec![10, 20, 30, 40, 50];
-    vecs2_get_item(1);
+    vecs2_get_item(3);
 }
 
 fn vecs_2() {
