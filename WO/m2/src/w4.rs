@@ -62,7 +62,7 @@ fn enums_1() {
         DiskType::HDD => println!("{}", "Disk type is HDD".bright_yellow().bold().blink()),
     }
 
-    divy("۞");
+    divy("⚛");
     let disk_size = DiskSize::GB(500);
     println!("Disk size is {:?}", disk_size);
 }
