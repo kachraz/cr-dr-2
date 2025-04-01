@@ -22,7 +22,8 @@ pub fn w3_main() {
     print_with_synthwave_gradient(title);
 
     // Call the functions
-    vecs_2();
+    // vecs_2();
+    vecs2_get_item_fn();
 }
 
 //////////////////////////////////////////
@@ -65,6 +66,11 @@ fn vecs2_get_item(index: usize) {
         index,
         value.to_string().green().italic()
     );
+}
+
+fn vecs2_get_item_fn() {
+    let vec = vec![10, 20, 30, 40, 50];
+    vecs2_get_item(2);
 }
 
 fn vecs_2() {
