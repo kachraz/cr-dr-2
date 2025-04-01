@@ -122,4 +122,50 @@ fn vecs_3() {
     let more_numz = vec![3, 4, 5];
     v.extend(more_numz);
     println!("After extend: {:?}", v.yellow().italic());
+
+    // Appends - adds given vector , requires vegctor to be mutable
+    divy("o");
+    let mut v2 = vec![22, 23, 32];
+    v.append(&mut v2);
+    println!("After append: {:?}", v.yellow().italic());
+
+    // Inserting an element at a specific index
+    divy("o");
+    v.insert(2, 100);
+    println!("After insert: {:?}", v.yellow().italic());
+
+    // Removing an element from the vector
+    divy("o");
+    let removed_value = v.remove(2);
+    println!(
+        "After remove: {:?} (removed value: {})",
+        v.yellow().italic(),
+        removed_value.to_string().green().italic()
+    );
+    // Removing the last element
+    divy("o");
+    let last_value = v.pop();
+    println!(
+        "After pop: {:?} (removed value: {})",
+        v.yellow().italic(),
+        last_value.unwrap_or(0).to_string().green().italic()
+    );
+
+    // Clearing the vector
+    divy("o");
+    v.clear();
+    println!("After clear: {:?}", v.yellow().italic());
+
+    // Checking if the vector is empty
+    divy("o");
+    if v.is_empty() {
+        println!("Vector is empty");
+    } else {
+        println!("Vector is not empty");
+    }
+
+    // Checking the length of the vector
+    divy("o");
+    let length = v.len();
+    println!("Length of vector: {}", length.to_string().green().italic());
 }
