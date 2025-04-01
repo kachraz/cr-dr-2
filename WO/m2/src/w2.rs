@@ -21,7 +21,7 @@ pub fn w2_main() {
     print_with_synthwave_gradient("Strings".to_string());
 
     // Call the functions
-    strman_3();
+    strman_4();
 }
 
 //////////////////////////////////////////
