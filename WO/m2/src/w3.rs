@@ -54,7 +54,17 @@ fn vecs_1() {
 // Retrieving elements from a vector
 
 fn vecs2_get_item(index: usize) {
-    let index = 3;
+    let index = 3; // Looks like int but is a usize
+    let vec = vec![10, 20, 30, 40, 50];
+
+    // Retrieve value at specific index
+    divy("o");
+    let value = vec[index]; // Indexing starts at 0
+    println!(
+        "Value at index {}: {}",
+        index,
+        value.to_string().green().italic()
+    );
 }
 
 fn vecs_2() {
