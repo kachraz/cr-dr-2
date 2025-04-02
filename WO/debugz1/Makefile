@@ -18,3 +18,4 @@ format: ## Format the project using cargo
 
 test: ## Run tests using cargo
 	cargo nextest run
+
