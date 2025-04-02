@@ -10,6 +10,7 @@ use ut::{clear_console, divy, header, print_with_synthwave_gradient};
 
 // Main function
 
+// Reading from stdin which is the cli
 pub fn read_stdin() -> String {
     let stdin = std::io::stdin();
     let mut reader = BufReader::new(stdin.lock());
