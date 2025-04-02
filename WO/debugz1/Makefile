@@ -9,3 +9,6 @@ clean: ## Clean the project using cargo
 
 build: ## Build the project using cargo
 	cargo build --release
+
+lint: ## Lint the project using cargo
+	cargo clippy --all-targets --all-features -- -D warnings
