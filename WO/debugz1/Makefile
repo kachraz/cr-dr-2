@@ -12,3 +12,6 @@ build: ## Build the project using cargo
 
 lint: ## Lint the project using cargo
 	cargo clippy --all-targets --all-features -- -D warnings
+
+format: ## Format the project using cargo
+	cargo fmt --all -- --check
