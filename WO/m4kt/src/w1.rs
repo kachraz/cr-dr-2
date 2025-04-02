@@ -16,7 +16,8 @@ use yansi::Paint;
 
 pub fn w1_main() {
     clear_console();
-    print_with_synthwave_gradient("Structs".to_string());
+    let main_header = "Moodules".to_string();
+    print_with_synthwave_gradient(main_header);
 
     // Call the functions
 }
