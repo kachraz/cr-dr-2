@@ -17,4 +17,4 @@ format: ## Format the project using cargo
 	cargo fmt --all -- --check
 
 test: ## Run tests using cargo
-	cargo next-test run
+	cargo nextest run
