@@ -1,3 +1,9 @@
+// main entry point
+
+mod ut;
+mod w4;
+use w4::w4_main;
+
 fn main() {
-    println!("Hello, world!");
+    w4_main();
 }
