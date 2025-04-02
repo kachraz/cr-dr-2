@@ -1,3 +1,12 @@
+//! Fuck off bastard
+//! This is for sucking and fucking
+//! Fuck all night
+//! ```
+//! use cli_utils::read_stding
+//! let input = read_stdin()
+//! ```
+//! Smell her ass
+
 /*
 Module4 - Learning the library
 */
