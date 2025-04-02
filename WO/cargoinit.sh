@@ -70,5 +70,38 @@ cargo_installz() {
     eval "$CO1"
 }
 
+cargo_lib() {
+    hea1 "Cargo New Initialization with yansi and cfonts"
+    # Get name of Project
+    echo -e "Enter the name of the cargo Library: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="cargo init --lib $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="cargo add yansi cfonts"
+    CO4="cargo tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
 #  Execution
-cargo_main_install
+cargo_lib
