@@ -103,5 +103,34 @@ cargo_lib() {
 
 }
 
-#  Execution
-cargo_lib
+show_menu() {
+    clear
+    hea1 "Cargo Project Management"
+    echo -e "${GREEN}1.${NC} Create new Cargo binary project"
+    echo -e "${GREEN}2.${NC} Create new Cargo library project"
+    echo -e "${GREEN}3.${NC} Install cargo tools (bacon, cargo-show-asm)"
+    echo -e "${GREEN}4.${NC} Exit"
+    echo -e ""
+    echo -e "Enter your choice [1-4]: "
+}
+
+# Main execution loop
+while true; do
+    show_menu
+    read choice
+    case $choice in
+    1) cargo_main_install ;;
+    2) cargo_lib ;;
+    3) cargo_installz ;;
+    4)
+        echo -e "${YELLOW}Exiting...${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Invalid option! Please try again.${NC}"
+        sleep 2
+        ;;
+    esac
+    echo -e "\n${YELLOW}Press any key to return to menu...${NC}"
+    read -n 1 -s
+done
