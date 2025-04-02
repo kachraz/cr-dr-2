@@ -4,11 +4,11 @@ SHELL := /bin/fish
 .PHONY: help
 
 help:
-	@gre
+	@grep -E '^[a-zA-Z_-]+:' Makefile | 
 
-clean:
+clean: ## Clean the project using cargo
 	cargo clean
 
-build:
+build: ## Build the project using cargo
 	cargo build --release
 
