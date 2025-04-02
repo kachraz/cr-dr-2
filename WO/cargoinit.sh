@@ -57,7 +57,7 @@ cargo_installz() {
     hea1 "Cargo Install"
 
     # Commands to execute
-    DEPS="bacon cargo-show-asm"
+    DEPS="bacon cargo-show-asm "
     CO1="cargo install $DEPS "
 
     # Show Commands
