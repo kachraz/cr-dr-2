@@ -49,3 +49,23 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
+
+
+fn mecol2() -> Result<(), Box<dyn std::error::Error>> {
+    let stdout = io::stdout();
+    let mut stdout = stdout.lock();
+
+    // Initialize Lolcrab with the Magma gradient and Perlin noise
+    let mut lol = Lolcrab::new(
+        Some(Box::new(colorgrad::preset::plasma())),
+        Some(Box::new(noise))
+    );
+
+    // Define the text you want to colorize
+    let text = "Your text here";
+
+    // Colorize the text
+    lol.colorize_str(text, &mut stdout)?;
+
+    Ok(())
+}
