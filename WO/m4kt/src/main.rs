@@ -2,6 +2,7 @@
 
 mod ut;
 mod w1;
+use m4lib::m4lib;
 use w1::w1_main;
 
 fn main() {
