@@ -17,34 +17,16 @@ pub enum LogOutput {
 /// This struct contains the configuration for logging in the M4 library.
 /// # Exaples :
 /// ```
-/// use m4lib::config::Logging;
-/// let mut logging = Logging::new();
-/// logging.enabled = true;
-/// logging.level = LogLevel::Debug;
-/// logging.destination = LogOutput::stdout;
-/// // Set the logging level to debug
-/// logging.level = LogLevel::Debug;
-/// // Set the logging destination to stdout
-/// logging.destination = LogOutput::stdout;
-/// // Enable logging
-/// logging.enabled = true;
-/// // Disable logging
-/// logging.enabled = false;
-/// // Set the logging destination to a file
-/// logging.destination = LogOutput::File("log.txt".to_string());
-/// // Set the logging level to info
-/// logging.level = LogLevel::Info;
-/// // Set the logging level to warning
-/// logging.level = LogLevel::Warning;
-/// // Set the logging level to error
-/// logging.level = LogLevel::Error;
-/// // Set the logging level to debug
-/// logging.level = LogLevel::Debug;
+/// use m4lib::config::{Logging, LogLevel, LogOutput};
+/// let config = Logging {
+///    enabled: true,
+///   level: LogLevel::Info,
+/// };
 /// ```
 pub struct Logging {
     pub enabled: bool,
     pub level: LogLevel,
-    pub destination: LogOutput,
+    destination: LogOutput,
 }
 
 impl Default for Logging {
