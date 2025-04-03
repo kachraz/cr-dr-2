@@ -20,25 +20,12 @@ pub struct Logging {
     destination: LogOutput,
 }
 
-implement Logging {
-    pub fn new(enabled: bool, level: LogLevel, destination: LogOutput) -> Self {
-        Logging {
-            enabled,
-            level,
-            destination,
-        }
-    }
-
-    pub fn log(&self, message: &str) {
-        if self.enabled {
-            match self.destination {
-                LogOutput::stdout => println!("{}", message),
-                LogOutput::stderr => eprintln!("{}", message),
-                LogOutput::File(ref path) => {
-                    // Implement file logging here
-                    // For example, using std::fs::write or a logging library
-                }
-            }
+impl Logging {
+    pub fn new() -> Self {
+        Self {
+            enabled: true,
+            level: LogLevel::Info,
+            destination: LogOutput::stdout,
         }
     }
 }

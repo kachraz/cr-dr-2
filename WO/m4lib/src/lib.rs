@@ -11,6 +11,7 @@
 Module4 - Learning the library
 */
 
+pub mod config;
 mod ut;
 use std::io::{BufRead, BufReader};
 use ut::header;
