@@ -20,9 +20,6 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let stdout = io::stdout();
     let mut stdout = stdout.lock();
 
-    // Initialize Lolcrab using default gradient and default noise
-    let mut lol = Lolcrab::new(Some(Box::new(Gradient::Cividis)), None);
-
     lol.colorize_str(TEXT, &mut stdout)?;
 
     Ok(())
