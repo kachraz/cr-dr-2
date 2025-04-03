@@ -53,14 +53,22 @@ pub fn subtract(left: u64, right: u64) -> u64 {
 //     }
 // }
 
+#[derive(Debug)]
+#[allw(dead_code)]
+struct Rectangle {
+        width: u32,
+        height: u32
+}
+
+impl 
+
+
+
 #[cfg(test)]
 mod tests2 {
     use super::*;
 
     #[test]
-    struct Rectangle {
-        width: u32
-        height: u32
-    }
+    
     
 }
