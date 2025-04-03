@@ -54,21 +54,22 @@ pub fn subtract(left: u64, right: u64) -> u64 {
 // }
 
 #[derive(Debug)]
-#[allw(dead_code)]
+#[allow(dead_code)]
 struct Rectangle {
-        width: u32,
-        height: u32
+    width: u32,
+    height: u32,
 }
 
-impl 
-
-
-
-#[cfg(test)]
-mod tests2 {
-    use super::*;
-
-    #[test]
-    
-    
+impl Rectangle {
+    fn can_hold(&self, other: &Rectangle) {
+        self.width > other.width && self.height > other.height
+    }
 }
+
+// #[cfg(test)]
+// mod tests2 {
+//     use super::*;
+
+//     #[test]
+
+// }
