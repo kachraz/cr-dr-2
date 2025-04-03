@@ -52,3 +52,31 @@ mod tests {
         panic!("😭 Failed");
     }
 }
+
+#[cfg(test)]
+mod tests2 {
+    use super::*;
+
+    #[test]
+    fn it_works_fuck() {
+        let result = add(2, 2);
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn it_works_multiply() {
+        let result = multiply(2, 2);
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn it_works_divide() {
+        let result = divide(4, 2);
+        assert_eq!(result, 2);
+    }
+
+    #[test]
+    fn it_wil_fail() {
+        panic!("😭 Failed");
+    }
+}
