@@ -60,16 +60,21 @@ struct Rectangle {
     height: u32,
 }
 
+#[allow(dead_code)]
 impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
 }
 
-// #[cfg(test)]
-// mod tests2 {
-//     use super::*;
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-//     #[test]
-
-// }
+    #[test]
+    fn larger_can_hold_sammer() {
+        let larger_rectangle = Rectangle {
+            width: 8
+        }
+    }
+}
