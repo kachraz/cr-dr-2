@@ -18,10 +18,6 @@ pub enum LogOutput {
 /// # Exaples :
 /// ```
 /// use m4lib::config::Logging;
-/// let mut logging = Logging::new();
-/// logging.enabled = true;
-/// logging.level = LogLevel::Debug;
-/// logging.destination = LogOutput::stdout;
 /// ```
 pub struct Logging {
     enabled: bool,
