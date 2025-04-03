@@ -23,8 +23,15 @@ impl Guess {
         }
         Guess { value }
     }
+}
 
-    pub fn value(&self) -> i32 {
-        self.value
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    #[should_panic(expected = "Guess value must be between 1 and 100, got 200")]
+    fn greater_than_100() {
+        Guess::new(200);
     }
 }
