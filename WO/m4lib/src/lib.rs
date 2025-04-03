@@ -2,7 +2,7 @@
 //! This is for sucking and fucking
 //! Fuck all night
 //! ```
-//! use cli_utils::read_stdin;
+//! use m4lib::read_stdin;
 //! let input = read_stdin();
 //! ```
 //! Smell her ass
