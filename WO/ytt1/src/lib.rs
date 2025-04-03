@@ -8,9 +8,9 @@ and they perform three main tasks:
 2. Run the code you want to test
 3. Asset the results are what you expect
 
-
 */
 
+// Anatomy of test function
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
