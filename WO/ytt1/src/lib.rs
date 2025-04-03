@@ -11,24 +11,3 @@ and they perform three main tasks:
 */
 
 // Testing Equalaity with assert_eq! and assert_ne!
-
-pub fn add(a: i32) -> i32 {
-    a + 3
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_add() {
-        let result = add(2);
-        assert_eq!(result, 4);
-    }
-
-    #[test]
-    fn test_add_not_equal() {
-        let result = add(2);
-        assert_ne!(result, 5);
-    }
-}

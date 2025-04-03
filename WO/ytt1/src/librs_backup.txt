@@ -110,3 +110,30 @@ mod tests {
         );
     }
 }
+
+///////////////////////////////////////// 
+Testing out 
+1. assert_eq = For equality 
+2. assert_ne = For Not Equal
+
+pub fn add(a: i32) -> i32 {
+    a + 3
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_add() {
+        let result = add(2);
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn test_add_not_equal() {
+        let result = add(2);
+        assert_ne!(result, 5);
+    }
+}
+
