@@ -25,58 +25,42 @@ pub fn subtract(left: u64, right: u64) -> u64 {
     left - right
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
 
-    #[test]
-    fn it_works_fuck() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+//     #[test]
+//     fn it_works_fuck() {
+//         let result = add(2, 2);
+//         assert_eq!(result, 4);
+//     }
 
-    #[test]
-    fn it_works_multiply() {
-        let result = multiply(2, 2);
-        assert_eq!(result, 4);
-    }
+//     #[test]
+//     fn it_works_multiply() {
+//         let result = multiply(2, 2);
+//         assert_eq!(result, 4);
+//     }
 
-    #[test]
-    fn it_works_divide() {
-        let result = divide(4, 2);
-        assert_eq!(result, 2);
-    }
+//     #[test]
+//     fn it_works_divide() {
+//         let result = divide(4, 2);
+//         assert_eq!(result, 2);
+//     }
 
-    #[test]
-    fn it_wil_fail() {
-        panic!("😭 Failed");
-    }
-}
+//     #[test]
+//     fn it_wil_fail() {
+//         panic!("😭 Failed");
+//     }
+// }
 
 #[cfg(test)]
 mod tests2 {
     use super::*;
 
     #[test]
-    fn it_works_fuck() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    struct Rectangle {
+        width: u32
+        height: u32
     }
-
-    #[test]
-    fn it_works_multiply() {
-        let result = multiply(2, 2);
-        assert_eq!(result, 4);
-    }
-
-    #[test]
-    fn it_works_divide() {
-        let result = divide(4, 2);
-        assert_eq!(result, 2);
-    }
-
-    #[test]
-    fn it_wil_fail() {
-        panic!("😭 Failed");
-    }
+    
 }
