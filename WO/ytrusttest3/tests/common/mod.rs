@@ -2,7 +2,7 @@
 Setting up tests in their own folder for organization
 */
 
-use lolcrab::Lolcrab;
+use lolcrab::{Gradient, Lolcrab};
 use std::io;
 
 pub fn setup() {
@@ -21,7 +21,7 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let mut stdout = stdout.lock();
 
     // Initialize Lolcrab using default gradient and default noise
-    let mut lol = Lolcrab::new(spectral, None);
+    let mut lol = Lolcrab::new(Gradient::Cividis, None);
 
     lol.colorize_str(TEXT, &mut stdout)?;
 
