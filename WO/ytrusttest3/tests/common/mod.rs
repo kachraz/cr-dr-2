@@ -2,22 +2,18 @@
 Setting up tests in their own folder for organization
 */
 
-use lolcrab::{Gradient, Lolcrab};
-use std::io;
+use lolcrab::Lolcrab;
+use std::io::{self, BufReader};
 
 pub fn setup() {
     mecol();
     println!("🍫🍫🍫🍫🍫🍫🍫🍫Setting up tests");
 }
 
-fn mecol() -> Result<(), Box<dyn std::error::Error>> {
-    let text = "Hello, colorful world!";
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     let stdout = io::stdout();
+
     let mut stdout = stdout.lock();
 
-    let mut lol = Lolcrab::new(Some(Gradient::Rainbow), None);
-
-    lol.colorize_str(text, &mut stdout)?;
-
-    Ok(())
+    let mut lol = Lolcrab::new(None, None);
 }
