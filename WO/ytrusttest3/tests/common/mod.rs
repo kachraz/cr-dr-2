@@ -58,7 +58,7 @@ fn mecol2() -> Result<(), Box<dyn std::error::Error>> {
     // Initialize Lolcrab with the Magma gradient and Perlin noise
     let mut lol = Lolcrab::new(
         Some(Box::new(colorgrad::preset::plasma())),
-        Some(Box::new(noise))
+        Some(Box::noise(NoiseFn(1, 2))),
     );
 
     // Define the text you want to colorize
