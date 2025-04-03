@@ -102,6 +102,15 @@ name = "m4kt"
 version = "0.1.0"
 dependencies = [
  "cfonts",
+ "m4lib",
+ "yansi",
+]
+
+[[package]]
+name = "m4lib"
+version = "0.1.0"
+dependencies = [
+ "cfonts",
  "yansi",
 ]
 
