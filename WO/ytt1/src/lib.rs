@@ -13,7 +13,7 @@ and they perform three main tasks:
 // Testing Equalaity with assert_eq! and assert_ne!
 
 pub fn add(a: i32) -> i32 {
-    a + 2
+    a + 3
 }
 
 #[cfg(test)]
