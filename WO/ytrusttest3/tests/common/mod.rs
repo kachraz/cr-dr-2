@@ -21,7 +21,7 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let mut stdout = stdout.lock();
 
     // Initialize Lolcrab using default gradient and default noise
-    let mut lol = Lolcrab::new(Gra, None);
+    let mut lol = Lolcrab::new(Some(Box::new(Gradient::Cividis)), None);
 
     lol.colorize_str(TEXT, &mut stdout)?;
 
