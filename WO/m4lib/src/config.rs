@@ -1,6 +1,5 @@
 //! Module containing the configuration for the M4 library.
 
-// Log Level Configs
 pub enum LogLevel {
     Debug,
     Info,
@@ -14,6 +13,16 @@ pub enum LogOutput {
     File(String),
 }
 
+/// Stuct for logging configuration
+/// This struct contains the configuration for logging in the M4 library.
+/// # Exaples :
+/// ```
+/// use m4lib::config::Logging;
+/// let mut logging = Logging::new();
+/// logging.enabled = true;
+/// logging.level = LogLevel::Debug;
+/// logging.destination = LogOutput::stdout;
+/// ```
 pub struct Logging {
     enabled: bool,
     level: LogLevel,
