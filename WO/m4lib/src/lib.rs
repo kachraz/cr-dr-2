@@ -15,8 +15,6 @@ mod ut;
 
 use std::io::{BufRead, BufReader};
 
-use ut::{clear_console, divy, header, print_with_synthwave_gradient};
-
 // Main function
 
 // Reading from stdin which is the cli
@@ -36,7 +34,7 @@ pub fn read_func() {
     while input.trim() != "stop" {
         input.clear();
         println!("Please enter a word (type stop to exit)");
-        io::stdin()
+        std::io::stdin()
             .read_line(&mut input)
             .expect("Failed to read line");
         println!("You entered: {}", input.trim());
