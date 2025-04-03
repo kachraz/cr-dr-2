@@ -12,7 +12,7 @@ build: ## Build the project
 	cargo build --release
 
 test: ## Run unit and integration tests
-	cargo test
+	cargo nextest run
 
 doctest: ## Run documentation tests
 	cargo test --doc
