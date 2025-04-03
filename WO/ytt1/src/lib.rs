@@ -13,7 +13,8 @@ and they perform three main tasks:
 // Adding a custom failure message
 
 pub fn greeting(name: &str) -> String {
-    format!("Hello, {}!", name)
+    // format!("Hello, {}!", name)
+    String::from("Hello, ")
 }
 
 #[cfg(test)]
@@ -23,7 +24,7 @@ mod tests {
     #[test]
     fn test_greeting() {
         let name = "Alice";
-        let expected = "Hello, Adlice!";
+        let expected = "Hello, Alice!";
         let result = greeting(name);
         assert_eq!(
             result, expected,
