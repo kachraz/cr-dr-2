@@ -21,6 +21,7 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let mut stdout = stdout.lock();
 
     let mut lol = Lolcrab::new(Some(Gradient::Cividis), None);
+
     lol.colorize_str(TEXT, &mut stdout)?;
 
     Ok(())
