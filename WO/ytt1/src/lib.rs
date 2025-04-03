@@ -85,5 +85,28 @@ mod tests {
             width: 5,
             height: 1,
         };
+
+        assert!(
+            larger_rectangle.can_hold(&smaller_rectangle),
+            "larger rectangle should hold smaller one"
+        );
+    }
+
+    #[test]
+    fn smaller_cannot_hold_larger() {
+        let larger_rectangle = Rectangle {
+            width: 8,
+            height: 7,
+        };
+
+        let smaller_rectangle = Rectangle {
+            width: 5,
+            height: 1,
+        };
+
+        assert!(
+            !smaller_rectangle.can_hold(&larger_rectangle),
+            "smaller rectangle should not hold larger one"
+        );
     }
 }
