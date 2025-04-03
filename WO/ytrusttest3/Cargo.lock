@@ -802,6 +802,7 @@ name = "ytrusttest3"
 version = "0.1.0"
 dependencies = [
  "cfonts",
+ "colorgrad",
  "lolcrab",
  "yansi",
 ]
