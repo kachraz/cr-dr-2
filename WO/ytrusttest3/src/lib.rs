@@ -1,3 +1,6 @@
+#!allow(dead_code)
+#![allow(unused_variables)]
+
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }

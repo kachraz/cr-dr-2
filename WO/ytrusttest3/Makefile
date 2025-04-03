@@ -26,7 +26,7 @@ test: ## Run unit and integration tests
 	@cfonts test | lolcrab
 	@echo -e "$(BLUE)Running tests...$(RESET)"
 	@cargo clippy --fix --allow-dirty --allow-staged
-	@cargo nextest run
+	@cargo nextest run -v --nocapture
 
 doctest: ## Run documentation tests
 	@echo -e "$(BLUE)Running documentation tests...$(RESET)"
