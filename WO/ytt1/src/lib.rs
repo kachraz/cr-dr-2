@@ -10,4 +10,37 @@ and they perform three main tasks:
 
 */
 
-// Testing Equalaity with assert_eq! and assert_ne!
+// Adding a custom failure message
+
+pub fn greeting(name: &str) -> String {
+    format!("Hello, {}!", name)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_greeting() {
+        let name = "Alice";
+        let expected = "Hello, Adlice!";
+        let result = greeting(name);
+        assert_eq!(
+            result, expected,
+            "Expected greeting to be '{}', but got '{}'",
+            expected, result
+        );
+    }
+
+    #[test]
+    fn test_greeting_empty() {
+        let name = "";
+        let expected = "Hello, !";
+        let result = greeting(name);
+        assert_eq!(
+            result, expected,
+            "Expected greeting to be '{}', but got '{}'",
+            expected, result
+        );
+    }
+}
