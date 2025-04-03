@@ -10,6 +10,9 @@ and they perform three main tasks:
 
 */
 
+#[allow(unused_variables)]
+#[allow(dead_code)]
+
 // Anatomy of test function
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
@@ -74,7 +77,13 @@ mod tests {
     #[test]
     fn larger_can_hold_sammer() {
         let larger_rectangle = Rectangle {
-            width: 8
-        }
+            width: 8,
+            height: 7,
+        };
+
+        let smaller_rectangle = Rectangle {
+            width: 5,
+            height: 1,
+        };
     }
 }
