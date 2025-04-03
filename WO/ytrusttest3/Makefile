@@ -23,9 +23,9 @@ build: ## Build the project
 	@cargo build --release
 
 test: ## Run unit and integration tests
-	@ cfonts test
- 	@cargo clippy --fix --allow-dirty --allow-staged
+	@cfonts test | lolcrab
 	@echo -e "$(BLUE)Running tests...$(RESET)"
+	@cargo clippy --fix --allow-dirty --allow-staged
 	@cargo nextest run
 
 doctest: ## Run documentation tests
