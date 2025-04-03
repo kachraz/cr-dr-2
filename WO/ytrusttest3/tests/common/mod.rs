@@ -10,7 +10,7 @@ pub fn setup() {
     println!("🍫🍫🍫🍫🍫🍫🍫🍫Setting up tests");
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let text = "Hello, colorful world!";
     let mut stdout = io::stdout();
     let mut stdout = stdout.lock();
