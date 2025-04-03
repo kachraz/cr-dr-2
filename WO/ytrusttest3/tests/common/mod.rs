@@ -2,6 +2,8 @@
 Setting up tests in their own folder for organization
 */
 
+use ::lolcrab::Gradient;
+
 pub fn setup() {
     println!("🍫🍫🍫🍫🍫🍫🍫🍫Setting up tests");
 }
