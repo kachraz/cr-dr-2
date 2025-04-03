@@ -10,10 +10,9 @@ pub fn setup() {
     println!("🍫🍫🍫🍫🍫🍫🍫🍫Setting up tests");
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let stdout = io::stdout();
-
     let mut stdout = stdout.lock();
-
     let mut lol = Lolcrab::new(None, None);
+    lol.gradient = Box::new(colorgrad::preset::viridis());
 }
