@@ -31,14 +31,10 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let stdout = io::stdout();
     let mut stdout = stdout.lock();
 
-    // Initialize Lolcrab with the "Magma" gradient
-    let mut lol = Lolcrab::new(Some("magma".to_string()), None);
+    let mut lol = Lolcrab::new(None, None);
+    lol.gradient = Box::new(colorgrad::preset::viridis());
 
-    // Define the text you want to colorize
-    let text = "Your text here";
-
-    // Colorize the text
-    lol.colorize_str(text, &mut stdout)?;
+    lol.colorize_str(TEXT, &mut stdout)?;
 
     Ok(())
 }
