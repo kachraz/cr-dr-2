@@ -21,7 +21,7 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
     let mut stdout = stdout.lock();
 
     // let mut lol = Lolcrab::new(None, None);
-    let mut lol = Lolcrab::new(gradient: Option<Box<dyn colorgrad::Gradient>>, None);
+    let mut lol = Lolcrab::new(gradient: Option<Box<dyn colorgrad::BasisGradient>>, None);
 
     lol.colorize_str(TEXT, &mut stdout)?;
 
