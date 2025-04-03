@@ -9,3 +9,15 @@ pub fn setup() {
     mecol();
     println!("🍫🍫🍫🍫🍫🍫🍫🍫Setting up tests");
 }
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let text = "Hello, colorful world!";
+    let mut stdout = io::stdout();
+    let mut stdout = stdout.lock();
+
+    let mut lol = Lolcrab::new(Some(Gradient::Rainbow), None);
+
+    println!("{}", lol.colorize_str(text, &mut stdout));
+
+    Ok(())
+}
