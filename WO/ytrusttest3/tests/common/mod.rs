@@ -37,20 +37,6 @@ ns: Option<Box<dyn noise::NoiseFn<f64, 2>>>
 - This is the proper way to use
 */
 
-fn mecol() -> Result<(), Box<dyn std::error::Error>> {
-    let stdout = io::stdout();
-    let mut stdout = stdout.lock();
-
-    let mut lol = Lolcrab::new(None, None);
-    lol.gradient = Box::new(colorgrad::preset::plasma());
-    lol.ns = Box::new(noise::NoiseFn::(1, 2));
-
-    lol.colorize_str(TEXT, &mut stdout)?;
-
-    Ok(())
-}
-
-
 fn mecol2() -> Result<(), Box<dyn std::error::Error>> {
     let stdout = io::stdout();
     let mut stdout = stdout.lock();
@@ -58,7 +44,7 @@ fn mecol2() -> Result<(), Box<dyn std::error::Error>> {
     // Initialize Lolcrab with the Magma gradient and Perlin noise
     let mut lol = Lolcrab::new(
         Some(Box::new(colorgrad::preset::plasma())),
-        Some(Box::noise(NoiseFn(1, 2))),
+        Some(Box::noise((1, 2))),
     );
 
     // Define the text you want to colorize
