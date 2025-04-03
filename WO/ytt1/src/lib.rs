@@ -28,7 +28,7 @@ mod tests {
         let result = greeting(name);
         assert_eq!(
             result, expected,
-            "Expected greeting to be '{}', but got '{}'",
+            "One Expected greeting to be '{}', but got '{}'",
             expected, result
         );
     }
@@ -40,7 +40,7 @@ mod tests {
         let result = greeting(name);
         assert_eq!(
             result, expected,
-            "Expected greeting to be '{}', but got '{}'",
+            "TWO ❌ Expected greeting to be '{}', but got '{}'",
             expected, result
         );
     }
