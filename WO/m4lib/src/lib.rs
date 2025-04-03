@@ -12,8 +12,8 @@ Module4 - Learning the library
 */
 
 mod ut;
-
 use std::io::{BufRead, BufReader};
+use ut::header;
 
 // Main function
 
@@ -30,6 +30,7 @@ pub fn read_stdin() -> String {
 }
 
 pub fn read_func() {
+    header("Looper");
     let mut input = String::new();
     while input.trim() != "stop" {
         input.clear();
