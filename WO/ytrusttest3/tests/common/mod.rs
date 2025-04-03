@@ -3,6 +3,7 @@ Setting up tests in their own folder for organization
 */
 
 use lolcrab::Lolcrab;
+use noise::NoiseFn;
 use std::io;
 
 pub fn setup() {
@@ -24,7 +25,7 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut lol = Lolcrab::new(None, None);
     lol.gradient = Box::new(colorgrad::preset::plasma());
-    lol.noise = Box::new(noise::Perlin::new());
+    lol.noise = Box::new(noise::NoiseFn1D::new(0.0, 0.1));
 
     lol.colorize_str(TEXT, &mut stdout)?;
 
