@@ -23,6 +23,7 @@ build: ## Build the project
 	@cargo build --release
 
 test: ## Run unit and integration tests
+	@cargo clippy --fix --allow-dirty --allow-staged
 	@echo -e "$(BLUE)Running tests...$(RESET)"
 	@cargo nextest run
 
