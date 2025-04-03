@@ -35,6 +35,7 @@ fn mecol() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut lol = Lolcrab::new(None, None);
     lol.gradient = Box::new(colorgrad::preset::plasma());
+    lol.noise = Some(colorgrad::GradientBuilder::new().build::<colorgrad::CatmullRomGradient>()?);
 
     lol.colorize_str(TEXT, &mut stdout)?;
 
