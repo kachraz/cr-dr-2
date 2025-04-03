@@ -18,16 +18,18 @@ const TEXT: &str = "\
 ╚═════╝   ╚═════╝   ╚═════╝     ╚═╝       ╚═╝   
 ";
 
-// fn mecol() -> Result<(), Box<dyn std::error::Error>> {
-//     let stdout = io::stdout();
-//     let mut stdout = stdout.lock();
+fn mecol() -> Result<(), Box<dyn std::error::Error>> {
+    let stdout = io::stdout();
+    let mut stdout = stdout.lock();
 
-//     let mut lol = Lolcrab::new(None, None);
+    let mut lol = Lolcrab::new(None, None);
+    lol.gradient = Box::new(colorgrad::preset::plasma());
+    lol.noise = Box::new(noise::Perlin::new());
 
-//     lol.colorize_str(TEXT, &mut stdout)?;
+    lol.colorize_str(TEXT, &mut stdout)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
 /*
 pub fn new(
@@ -36,22 +38,3 @@ ns: Option<Box<dyn noise::NoiseFn<f64, 2>>>
 ) -> Self
 - This is the proper way to use
 */
-
-fn mecol2() -> Result<(), Box<dyn std::error::Error>> {
-    let stdout = io::stdout();
-    let mut stdout = stdout.lock();
-
-    // Initialize Lolcrab with the Magma gradient and Perlin noise
-    let mut lol = Lolcrab::new(
-        Some(Box::new(colorgrad::preset::plasma())),
-        Some(Box::noise((1, 2))),
-    );
-
-    // Define the text you want to colorize
-    let text = "Your text here";
-
-    // Colorize the text
-    lol.colorize_str(text, &mut stdout)?;
-
-    Ok(())
-}
