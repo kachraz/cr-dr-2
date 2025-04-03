@@ -137,3 +137,37 @@ mod tests {
     }
 }
 
+
+pub fn greeting(name: &str) -> String {
+    // format!("Hello, {}!", name)
+    String::from("Hello, ")
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_greeting() {
+        let name = "Alice";
+        let expected = "Hello, Alice!";
+        let result = greeting(name);
+        assert_eq!(
+            result, expected,
+            "One Expected greeting to be '{}', but got '{}'",
+            expected, result
+        );
+    }
+
+    #[test]
+    fn test_greeting_empty() {
+        let name = "";
+        let expected = "Hello, !";
+        let result = greeting(name);
+        assert_eq!(
+            result, expected,
+            "TWO ❌ Expected greeting to be '{}', but got '{}'",
+            expected, result
+        );
+    }
+}

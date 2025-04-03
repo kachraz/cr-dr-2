@@ -10,38 +10,21 @@ and they perform three main tasks:
 
 */
 
-// Adding a custom failure message
+// Checking the panic atttribute
 
-pub fn greeting(name: &str) -> String {
-    // format!("Hello, {}!", name)
-    String::from("Hello, ")
+pub struct Guess {
+    value: i32,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_greeting() {
-        let name = "Alice";
-        let expected = "Hello, Alice!";
-        let result = greeting(name);
-        assert_eq!(
-            result, expected,
-            "One Expected greeting to be '{}', but got '{}'",
-            expected, result
-        );
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 || value > 100 {
+            panic!("Guess value must be between 1 and 100, got {}", value);
+        }
+        Guess { value }
     }
 
-    #[test]
-    fn test_greeting_empty() {
-        let name = "";
-        let expected = "Hello, !";
-        let result = greeting(name);
-        assert_eq!(
-            result, expected,
-            "TWO ❌ Expected greeting to be '{}', but got '{}'",
-            expected, result
-        );
+    pub fn value(&self) -> i32 {
+        self.value
     }
 }
