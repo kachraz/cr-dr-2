@@ -25,6 +25,12 @@ pub struct Logging {
     destination: LogOutput,
 }
 
+impl Default for Logging {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Logging {
     pub fn new() -> Self {
         Self {
